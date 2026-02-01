@@ -1,0 +1,3 @@
+DROP DATABASE IF EXISTS home_unieeuu;
+
+CREATE DATABASE home_unieeuu DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_spanish_ci;
