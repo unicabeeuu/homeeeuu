@@ -1,7 +1,7 @@
 DROP TABLE IF EXISTS tbl_conceptos_pago;
 
 CREATE TABLE tbl_conceptos_pago (
-  id int(11) UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  id int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
   valor varchar(10) CHARACTER SET utf8mb4 COLLATE utf8mb4_spanish_ci NOT NULL,
   texto varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_spanish_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_spanish_ci; 

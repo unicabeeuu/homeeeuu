@@ -2,8 +2,8 @@
 DROP TABLE IF EXISTS tbl_imagenes;
 
 CREATE TABLE tbl_imagenes (
-  id int(11) UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
-  id_seccion int(11) UNSIGNED NOT NULL,
+  id int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  id_seccion int(11) NOT NULL,
   ruta varchar(200) CHARACTER SET utf8mb4 COLLATE utf8mb4_spanish_ci NOT NULL,
   rutaMovil varchar(200) CHARACTER SET utf8mb4 COLLATE utf8mb4_spanish_ci NOT NULL,
   rutaTabletaVertical varchar(200) CHARACTER SET utf8mb4 COLLATE utf8mb4_spanish_ci NOT NULL,
@@ -291,6 +291,6 @@ UPDATE tbl_imagenes SET enlace = 'https://unicab.org/homeunicabpro/business/cart
 UPDATE tbl_imagenes SET enlace = 'https://unicab.org/homeunicabpro/business/solutions/pages/somos.php' WHERE (id = '38');
 UPDATE tbl_imagenes SET titulo = 'LUNES A VIERNES<br>8:00 a.m. A 12:00 p.m.<br>2:00 p.m A 6:00 p.m.' WHERE (id = '66');
 
-UPDATE tbl_imagenes SET id_seccion = '0' WHERE (id = '40');
-UPDATE tbl_imagenes SET id_seccion = '0' WHERE (id = '149');
-UPDATE tbl_imagenes SET id_seccion = '0' WHERE (id = '150');
+UPDATE tbl_imagenes SET id_seccion = '1' WHERE (id = '40');
+UPDATE tbl_imagenes SET id_seccion = '1' WHERE (id = '149');
+UPDATE tbl_imagenes SET id_seccion = '1' WHERE (id = '150');

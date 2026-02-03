@@ -1,7 +1,7 @@
 DROP TABLE IF EXISTS tbl_eventos;
 
 CREATE TABLE tbl_eventos (
-  id int(11) UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  id int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
   nombre varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_spanish2_ci DEFAULT NULL,
   descripcion varchar(150) CHARACTER SET utf8mb4 COLLATE utf8mb4_spanish2_ci DEFAULT NULL,
   fechaPublicacion date DEFAULT NULL,

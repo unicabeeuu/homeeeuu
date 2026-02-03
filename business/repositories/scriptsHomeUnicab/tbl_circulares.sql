@@ -1,7 +1,7 @@
 DROP TABLE IF EXISTS tbl_circulares;
 
 CREATE TABLE tbl_circulares (
-  id INT(11) UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  id INT(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
   nombreArchivo VARCHAR(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_spanish_ci NOT NULL,
   ruta VARCHAR(500) CHARACTER SET utf8mb4 COLLATE utf8mb4_spanish_ci NOT NULL,
   destino varchar(10) CHARACTER SET utf8mb4 COLLATE utf8mb4_spanish_ci NULL,

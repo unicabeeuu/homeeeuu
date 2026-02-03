@@ -18,10 +18,10 @@
     }
     
     if (getenv('APP_ENV') == "local") {
-        $mysqli2 = new mysqli(getenv('DB_HOST'), getenv('DB_USERNAME_L'), getenv('DB_PASSWORD_L'), getenv('DB_DATABASE_ORG'), getenv('DB_PORT'));
+        $mysqli2 = new mysqli(getenv('DB_HOST'), getenv('DB_USERNAME_L'), getenv('DB_PASSWORD_L'), getenv('DB_DATABASE_ORG_L'), getenv('DB_PORT'));
     }
     else if (getenv('APP_ENV') == "pro") {
-        $mysqli2 = new mysqli(getenv('DB_HOST'), getenv('DB_USERNAME_ORG'), getenv('DB_PASSWORD_ORG'), getenv('DB_DATABASE_ORG'));
+        $mysqli2 = new mysqli(getenv('DB_HOST'), getenv('DB_USERNAME_ORG_P'), getenv('DB_PASSWORD_ORG_P'), getenv('DB_DATABASE_ORG_P'));
     }
     
 	if(mysqli_connect_error()) {

@@ -1,7 +1,7 @@
 DROP TABLE IF EXISTS tbl_secciones;
 
 CREATE TABLE tbl_secciones (
-  id int(11) UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  id int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
   seccion varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_spanish_ci NOT NULL,
   visible int(11) NOT NULL,
   paginaPadre varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_spanish_ci NOT NULL,
@@ -10,8 +10,10 @@ CREATE TABLE tbl_secciones (
   texto varchar(10000) CHARACTER SET utf8mb4 COLLATE utf8mb4_spanish_ci NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_spanish_ci;
 
-INSERT INTO tbl_secciones (id, seccion, visible, paginaPadre, titulo, subTitulo, texto) VALUES
-(0, '', 0, '', '', '', '');
+INSERT INTO tbl_secciones (seccion, visible, paginaPadre, titulo, subTitulo, texto) VALUES
+('', 0, '', '', '', '');
+
+UPDATE tbl_secciones SET id = 0;
 
 ALTER TABLE tbl_secciones
   MODIFY id int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1;
