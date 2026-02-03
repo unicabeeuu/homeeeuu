@@ -1,8 +1,8 @@
 DROP TABLE IF EXISTS tbl_formularios;
 
 CREATE TABLE tbl_formularios (
-  id int(11) UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
-  id_seccion int(11) UNSIGNED NOT NULL,
+  id int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  id_seccion int(11) NOT NULL,
   campo varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_spanish_ci NOT NULL,
   tipo varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_spanish_ci NOT NULL,
   texto varchar(200) CHARACTER SET utf8mb4 COLLATE utf8mb4_spanish_ci NOT NULL,
@@ -10,8 +10,8 @@ CREATE TABLE tbl_formularios (
   soloLectura varchar(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_spanish_ci NOT NULL DEFAULT '',
   habilitado varchar(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_spanish_ci NOT NULL DEFAULT '',
   placeHolder varchar(200) CHARACTER SET utf8mb4 COLLATE utf8mb4_spanish_ci NULL DEFAULT '',
-  INDEX fk_tbl_menus_tbl_secciones (id_seccion),
-  CONSTRAINT fk_tbl_menus_tbl_secciones FOREIGN KEY (id_seccion) REFERENCES tbl_secciones (id)
+  INDEX fk_tbl_formularios_tbl_secciones (id_seccion),
+  CONSTRAINT fk_tbl_formularios_tbl_secciones FOREIGN KEY (id_seccion) REFERENCES tbl_secciones (id)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_spanish_ci;
 
 INSERT INTO tbl_formularios (id_seccion, campo, tipo, texto, obligatorio, soloLectura, habilitado, placeHolder ) VALUES 
