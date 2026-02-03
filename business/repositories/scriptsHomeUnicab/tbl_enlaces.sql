@@ -1,8 +1,8 @@
 DROP TABLE IF EXISTS tbl_enlaces;
 
 CREATE TABLE tbl_enlaces (
-    id int(11) UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
-    id_seccion int(11) UNSIGNED NOT NULL,
+    id int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    id_seccion int(11) NOT NULL,
     identificacion varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_spanish_ci NULL,
     link varchar(200) NOT NULL DEFAULT '',
     visible int(11) NOT NULL
