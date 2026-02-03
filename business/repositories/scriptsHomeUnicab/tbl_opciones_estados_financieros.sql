@@ -1,7 +1,7 @@
 DROP TABLE IF EXISTS tbl_opciones_estados_financieros;
 
 CREATE TABLE tbl_opciones_estados_financieros (
-  id int(11) UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  id int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
   nombrePadre varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_spanish_ci NOT NULL,
   valor varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_spanish_ci NOT NULL,
   visible int(11) NOT NULL

@@ -1,7 +1,7 @@
 DROP TABLE IF EXISTS tbl_banners;
 
 CREATE TABLE tbl_banners (
-  id int(11) UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  id int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
   visible int(11) NOT NULL,
   tipo varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_spanish_ci NOT NULL,
   ruta varchar(200) CHARACTER SET utf8mb4 COLLATE utf8mb4_spanish_ci NOT NULL,

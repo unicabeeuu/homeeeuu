@@ -1,7 +1,7 @@
 DROP TABLE IF EXISTS tbl_sentencias;
 
 CREATE TABLE tbl_sentencias (
-  id int(11) UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  id int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
   utilizaJoin varchar(2) CHARACTER SET utf8mb4 COLLATE utf8mb4_spanish_ci NOT NULL,
   joinTablas varchar(1000) CHARACTER SET utf8mb4 COLLATE utf8mb4_spanish_ci NOT NULL,
   campos varchar(1000) CHARACTER SET utf8mb4 COLLATE utf8mb4_spanish_ci NOT NULL,
