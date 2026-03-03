@@ -54,7 +54,7 @@
                                     . 'class="mx-lg-0 mx-auto btn shadow h-auto tx-color-wh btn-calendary fw-semibold" '
                                     . 'style="width:200px;"'
                                     . '>'
-                                    . 'Ver'
+                                    . 'See'
                                     . '</a>';
                     $html_row_two .= '</div>';
                     $html_row_two .= '</div>';

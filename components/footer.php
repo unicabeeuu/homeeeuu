@@ -183,7 +183,7 @@ $entities = '
     <div class="col-10 col-md-11 d-flex flex-column flex-lg-row flex-md-row align-items-center align-items-lg-end align-items-md-end m-auto my-4 justify-content-between">
         <div class="text-center mb-3 mb-lg-0">
             <p4-footer class="entidades-tx m-auto font-roboto-light tx-white py-1">
-                <b>Entidades que nos vigilan:</b>
+                <b>Entities that monitor us:</b>
             </p4-footer>
         </div>';
 
@@ -250,7 +250,7 @@ foreach ($copyrightDatos as $filaCopy) {
                     <div class="row col-12 col-lg-5 col-md-3 d-flex flex-column pt-4 w-auto mx-auto">
                         <div class="d-flex flex-column mb-3 mx-auto">
                             <p-footer class="lh-sm .llamanos-escribenos font-roboto-bold text-center text-md-start text-lg-center my-0 mx-auto mx-md-0 mx-lg-auto tx-white">
-                                Llámanos o escríbenos
+                                Call us or write to us
                             </p-footer>
                             <h5-footer class="numero-telefono lh-sm font-roboto-bolditalic text-center text-md-start text-lg-center my-0 mx-auto mx-md-0 mx-lg-auto tx-white">
                                 <?php echo $tel; ?>
@@ -261,7 +261,7 @@ foreach ($copyrightDatos as $filaCopy) {
                         </div>
                         <div id="info" class="d-flex flex-column w-auto mx-auto">
                             <p1-footer class="encuentranos font-roboto-bolditalic text-center text-md-start text-lg-center my-0 mx-auto mx-md-0 mx-lg-auto">
-                                Encuéntranos
+                                Find us
                             </p1-footer>
                             <?php echo $hmtl_social_media; ?>
                             <p-footer class="direccion-unicab-footer font-roboto-light text-center text-md-start text-lg-center mx-auto mx-md-0 mx-lg-auto mt-4 mb-0 tx-white">

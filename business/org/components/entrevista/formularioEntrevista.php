@@ -147,7 +147,7 @@
                             <center>
                                 <div class="form-group">
                                     <label for="'.$documento_estudiante['campo'].'" class="form-label1">'.$documento_estudiante['texto'].'</label>
-                                    <input type="'.$documento_estudiante['tipo'].'" class="form-control campoFormulario" id="'.$documento_estudiante['campo'].'" name="'.$documento_estudiante['campo'].'" placeholder="Escribe el número de documento del estudiante" onkeyup="validarCampo(this, \'Número documento estudiante\', \'numero\', 0, \'\');" onBlur="limpiar();" required>
+                                    <input type="'.$documento_estudiante['tipo'].'" class="form-control campoFormulario" id="'.$documento_estudiante['campo'].'" name="'.$documento_estudiante['campo'].'" placeholder="Enter the student´s document number" onkeyup="validarCampo(this, \'Número documento estudiante\', \'numero\', 0, \'\');" onBlur="limpiar();" required>
                                     <input type="hidden" style="width: 20px" id="ctr_'.$documento_estudiante['campo'].'" value="1"/>
                                 </div>
                             </center>

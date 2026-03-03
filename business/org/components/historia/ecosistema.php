@@ -20,7 +20,7 @@
                     <h4 class="tx-orange historia-ecosistema-title">'.$titulo.'</h4>
                 </div>
 
-                <a class="historia-ecosistema-seeMore" role="button" data-texto-expandido="false" onclick="displayEcosistema(\'ecosistema'.$id.'\', this)">Leer más</a>
+                <a class="historia-ecosistema-seeMore" role="button" data-texto-expandido="false" onclick="displayEcosistema(\'ecosistema'.$id.'\', this)">Read More</a>
                 <hr class="historia-ecosistema-separator">
                 <p class="historia-ecosistema-p historia-ecosistema-efecto" id="ecosistema'.$id.'">'.tratarTexto($texto).'</p>
             </div>

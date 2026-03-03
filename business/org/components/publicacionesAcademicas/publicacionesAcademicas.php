@@ -61,7 +61,7 @@
             $html .=        '</div>';
             $html .=    '</div>';
             $html .=    '<div class="col-lg-7 col-md-12 col-sm-12 col-12">';
-            $html .=        '<span class="fecha-publicaciones">Publicación: '.$date->format('m/Y'). '</span>';
+            $html .=        '<span class="fecha-publicaciones">Publication: '.$date->format('m/Y'). '</span>';
             $html .=        '<p class="p-publicaciones">'. $row_publicacion['texto'] . '</p>';
             $html .=        '<div class="row align-items-center btn-my-publicaciones">';
             $html .=            '<div class="col-lg-3 col-md-3 col-sm-4 col-4 text-center">';
@@ -85,7 +85,7 @@
                 $href .= '../../../'. $row_publicacion['linkLeer'];
             }*/
 
-            $html .=                '<a href="'.$row_publicacion['ruta'].'" target="_blank" class="btn-publicaciones">Leer</a>';
+            $html .=                '<a href="'.$row_publicacion['ruta'].'" target="_blank" class="btn-publicaciones">Read</a>';
             $html .=            '</div>';
             $html .=            '<div class="col-lg-4 d-lg-block d-md-none col-sm-5 col-4"></div>';
             $html .=        '</div>';
