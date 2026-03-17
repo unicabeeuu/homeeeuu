@@ -24,7 +24,7 @@ INSERT INTO tbl_enlaces (id_seccion, identificacion, link, visible) VALUES
 (7, 'Library', 'https://unicab.org/biblioteca/Biblioteca_Unicab/', 1),
 (7, 'Entities that monitor us', '#entidadesVigilan', 1),
 (7, 'Evidence from conferences and awards', '#', 0),
-(7, 'Opening hours', 'business/org/pages/directorioInstitucional.php#horarios', 1),
+(7, 'Hours of attention', 'business/org/pages/directorioInstitucional.php#horarios', 1),
 (7, 'Directory', 'business/org/pages/directorioInstitucional.php', 1),
 (7, 'Investigation', 'business/org/pages/publicacionesAcademicas.php', 1);
 

@@ -52,7 +52,7 @@ INSERT INTO tbl_imagenes (id_seccion, ruta, rutaMovil, rutaTabletaVertical, ruta
 (7, 'assets/img/directorio.png', '', '', '', 'directorio', 'Directory', 'derecha', '', ''),
 (7, 'assets/img/investigacion.png', '', '', '', 'investigacion', 'Investigation', 'derecha', '', ''),
 (8, 'assets/img/conectados.png', '', '', '', 'conectados', '', '', '', ''),
-(8, 'assets/img/enviar.png', '', '', '', 'Suscribir', '', 'derecha', '', ''),
+(8, 'assets/img/enviar.png', '', '', '', 'Subscribe', '', 'derecha', '', ''),
 (9, 'assets/img/unicab.png', '', '', '', 'logoUnicab', '', '', '', ''),
 (10, 'assets/img/unicab.png', '', '', '', 'logo', 'Unicab Virtual College', '', 'https://unicab.org/homeunicabpro/', ''),
 (10, 'assets/img/carti_explora.png', '', '', '', 'logo', 'CARTI Explore', '', 'https://unicab.org/homeunicabpro/business/cartiExplora/pages/cartiHome.php','' ),
