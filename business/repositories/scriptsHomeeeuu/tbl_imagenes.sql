@@ -54,9 +54,9 @@ INSERT INTO tbl_imagenes (id_seccion, ruta, rutaMovil, rutaTabletaVertical, ruta
 (8, 'assets/img/conectados.png', '', '', '', 'conectados', '', '', '', ''),
 (8, 'assets/img/enviar.png', '', '', '', 'Subscribe', '', 'derecha', '', ''),
 (9, 'assets/img/unicab.png', '', '', '', 'logoUnicab', '', '', '', ''),
-(10, 'assets/img/unicab.png', '', '', '', 'logo', 'Unicab Virtual College', '', 'https://unicab.org/homeunicabpro/', ''),
-(10, 'assets/img/carti_explora.png', '', '', '', 'logo', 'CARTI Explore', '', 'https://unicab.org/homeunicabpro/business/cartiExplora/pages/cartiHome.php','' ),
-(10, 'assets/img/unicab_solutions.png', '', '', '', 'logo', 'UNICAB Solutions', '', 'https://unicab.org/homeunicabpro/business/solutions/pages/somos.php', ''),
+(10, 'assets/img/unicab.png', '', '', '', 'logo', 'Unicab Virtual College', '', 'https://thriveusa.org/', ''),
+(10, 'assets/img/carti_explora.png', '', '', '', 'logo', 'CARTI Explore', '', 'https://thriveusa.org/business/cartiExplora/pages/cartiHome.php','' ),
+(10, 'assets/img/unicab_solutions.png', '', '', '', 'logo', 'UNICAB Solutions', '', 'https://thriveusa.org/business/solutions/pages/somos.php', ''),
 
 (10, 'assets/img/facebook.png', '', '', '', 'social-media', 'facebook', '', '', ''),
 (10, 'assets/img/x.png', '', '', '', 'social-media', 'x', '', '', ''),
@@ -276,7 +276,7 @@ UPDATE tbl_imagenes SET enlace = 'business/org/pages/sobreNosotros.php#primariaY
 UPDATE tbl_imagenes SET enlace = 'business/org/pages/sobreNosotros.php#primariaYBachillerato' WHERE (id = '2');
 UPDATE tbl_imagenes SET enlace = 'business/org/pages/sobreNosotros.php#ciclos' WHERE (id = '3');
 
-UPDATE tbl_imagenes SET enlace = 'https://unicab.org/homeunicabpro/#inscripcionesAbiertas' WHERE (id = '131');
+UPDATE tbl_imagenes SET enlace = 'https://thriveusa.org/#inscripcionesAbiertas' WHERE (id = '131');
 
 UPDATE tbl_imagenes SET ruta = 'assets/img/GIU.jpg' WHERE id = 77 AND ruta = "assets/img/GIU.png";
 UPDATE tbl_imagenes SET ruta = 'assets/img/equipoDocentes.jpg' WHERE id = 81 AND ruta = "assets/img/EquipoMaestros.png";
@@ -286,9 +286,9 @@ UPDATE tbl_imagenes SET titulo = 'Strengthening principles and values <br><span>
 UPDATE tbl_imagenes SET titulo = 'Development of creative thinking <br><span>of the student.</span>' WHERE id = 85 AND titulo = "Development of the student´s creative thinking."
 ;
 
-UPDATE tbl_imagenes SET enlace = 'https://unicab.org/homeunicabpro/#inicio' WHERE (id = '36');
-UPDATE tbl_imagenes SET enlace = 'https://unicab.org/homeunicabpro/business/cartiExplora/pages/cartiHome.php' WHERE (id = '37');
-UPDATE tbl_imagenes SET enlace = 'https://unicab.org/homeunicabpro/business/solutions/pages/somos.php' WHERE (id = '38');
+UPDATE tbl_imagenes SET enlace = 'https://thriveusa.org/#inicio' WHERE (id = '36');
+UPDATE tbl_imagenes SET enlace = 'https://thriveusa.org/business/cartiExplora/pages/cartiHome.php' WHERE (id = '37');
+UPDATE tbl_imagenes SET enlace = 'https://thriveusa.org/business/solutions/pages/somos.php' WHERE (id = '38');
 UPDATE tbl_imagenes SET titulo = 'MONDAY TO FRIDAY<br>8:00 a.m. A 12:00 p.m.<br>2:00 p.m A 6:00 p.m.' WHERE (id = '66');
 
 UPDATE tbl_imagenes SET id_seccion = '1' WHERE (id = '40');

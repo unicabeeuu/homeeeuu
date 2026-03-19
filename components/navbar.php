@@ -10,6 +10,7 @@ $nivelMap = [
 if (!isset($nivel) || !array_key_exists($nivel, $nivelMap)) {
     $nivel = 'raiz';
 }
+//echo $nivel;
 $repoPrefix  = $nivelMap[$nivel]['repo_prefix'];
 $levelSelect = $nivelMap[$nivel]['link_class'];
 

@@ -65,6 +65,7 @@
      }
 
      $nivel = "raiz";
+     //echo $nivel;
 
      // Obteniendo los datos de los indicadores
      require('business/repositories/1cc2s4Home.php');
@@ -89,6 +90,7 @@
                          </div>
                     </div>
           ';
+          //echo $html;          
      }    
 
      // Obteniendo las imagenes de los indicadores
@@ -100,8 +102,10 @@
      $res_datos = $mysqli1->query($sql_datos);
      while($row_datos = $res_datos->fetch_assoc()){
           $indicadoresDatos[] = [$row_datos['ruta'], $row_datos['titulo'], $row_datos['posicionTitulo']];
-     }    
-
+     }
+     //var_dump($indicadoresDatos);
+     //echo "<br><br>.....<br>";  
+          
      // Obteniendo los parametros necesarios
      $res_sentencia = $mysqli1->query($sentencia."139");
      while($row_sentencia = $res_sentencia->fetch_assoc()){
@@ -111,7 +115,8 @@
      $res_datos = $mysqli1->query($sql_datos);
      while($row_datos = $res_datos->fetch_assoc()){
           $valoresIndicadores[$row_datos['parametro']] = ['valor' => $row_datos['v1']];
-     }  
+     }
+     //var_dump($valoresIndicadores);
      
      // Verificando la visibilidad de la seccion
      if ($html != '') {
@@ -138,6 +143,7 @@
                     $valor = $valoresIndicadores['indicador_'.strtolower($datos[1])]['valor'];
                }               
                else {
+                    $valor = 0;
                     //Se hace la consulta de los estudiantes activos
                     /*$sql_activos = "SELECT COUNT(1) ct FROM `matricula` where n_matricula like '%2025%' and estado = 'activo'";*/
                     $sentenciaFinal = $sentencia2."'estudiantes activos'";
