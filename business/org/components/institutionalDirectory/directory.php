@@ -8,7 +8,7 @@
         $html_row_one = '<div class="row col-12 p-0 m-0">';
         $html_row_one .= '<div class="col-1 p-0 m-0"></div>';
         $html_row_one .= '<div class="col-lg-5 col-6 p-0 m-0">';
-        $html_row_one .= '<h3-directory class="tx-blue font-roboto-light-title col-lg-5 col-12">' . $row_datos_directorio['titulo'] . '</h3-directory>';
+        $html_row_one .= '<h3-directory class="tx-dark-blue font-roboto-light-title col-lg-5 col-12">' . $row_datos_directorio['titulo'] . '</h3-directory>';
         $html_row_one .= '</div>';
         $html_row_one .= '<div class="col-lg-6 col-5 p-0 m-0"></div>';
         $html_row_one .= '</div>';
@@ -20,7 +20,7 @@
         $html_row_two .= '<div class="col-10 p-0 m-0">';
         $html_row_two .= '<div class="row col-10 mx-auto p-0 m-0 mb-2">';
         $html_row_two .= '<div class="col-lg-8 col-md-12 col-sm-12 col-12 p-0 m-0 d-flex">';
-        $html_row_two .= '<h4-directory class="tx-orange font-roboto-light my-auto text-center mx-auto">Call us or write to us</h4-directory>';
+        $html_row_two .= '<h4-directory class="tx-pink font-roboto-light my-auto text-center mx-auto">Call us or write to us</h4-directory>';
         $html_row_two .= '</div>';
         $html_row_two .= '</div>';
         $html_row_two .= '</div>';

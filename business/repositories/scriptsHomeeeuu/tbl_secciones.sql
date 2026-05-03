@@ -21,10 +21,10 @@ ALTER TABLE tbl_secciones
 INSERT INTO tbl_secciones (seccion, visible, paginaPadre, titulo, subTitulo, texto) VALUES
 ('banner', 1, 'home', '', '', ''),
 ('ofertaAcademica', 1, 'home', 'Academic Offer', '', ''),
-('descubreTusHabilidades', 1, 'home', 'Discover Your Skills', 'CARTI EXPLORE', 'High Performance Center for Talent and Intelligence'),
+('descubreTusHabilidades', 0, 'home', 'Discover Your Skills', 'CARTI EXPLORE', 'High Performance Center for Talent and Intelligence'),
 ('inscripcionesAbiertas', 1, 'home', 'Registrations Open', '2025', 'Call us or write to us'),
 ('indicadores', 1, 'home', 'Indicators that speak about us', '', ''),
-('conoceNuetroCampus', 1, 'home', 'Get to know', 'Our Campus', 'CARTI EXPLORA is the High Performance Center for Talent and Intelligence, the UNICAB Educational Corporation´s campus located in the Municipality of Sogamoso. It serves students from the region, the department, and the country through learning spaces that, like a laboratory, allow students to explore their curiosity, personal skills, and thinking abilities by interacting directly with sports, nature, art, science, culture, and technology, and stimulating creativity, research, and socio-emotional development autonomously.'),
+('conoceNuetroCampus', 0, 'home', 'Get to know', 'Our Campus', 'CARTI EXPLORA is the High Performance Center for Talent and Intelligence, the UNICAB Educational Corporation´s campus located in the Municipality of Sogamoso. It serves students from the region, the department, and the country through learning spaces that, like a laboratory, allow students to explore their curiosity, personal skills, and thinking abilities by interacting directly with sports, nature, art, science, culture, and technology, and stimulating creativity, research, and socio-emotional development autonomously.'),
 ('zonaDeEnlaces', 1, 'home', 'Link Zone', '', ''),
 ('blogConectados', 1, 'home', 'Blog', '', ''),
 ('navBar', 1, 'home', '', '', ''),
@@ -51,8 +51,8 @@ INSERT INTO tbl_secciones (seccion, visible, paginaPadre, titulo, subTitulo, tex
 
 ('nuestrosEstudiantes', 1, 'nuestrosEstudiantes', '<b>Our</b><br>Students', '', ''),
 ('publicacionesAcademicas', 1, 'publicacionesAcademicas', '<b>Publications</b> Academics', '', ''),
-('principiosYValores', 1, 'principiosYValores', '<b>Principles and</b><br>Corporate Values', '', 'UNICAB is a formal education institution that strives for the comprehensive development of each and every one of its students; but when we talk about development, we move to a completely innovative context, because it is here where, through our curricular structure, development is the autonomous and conscious result of the student in terms of a defined learning process and a flexible, dynamic, and relevant teaching methodology based on ethical principles so that, together with the development of capacities, skills, and abilities in specific areas, they can have excellent performance and project a harmonious life project with identity, which corresponds to their dreams, aspirations, and abilities.'),
-('cartiHome', 1, 'cartiHome', '<b>CARTI</b> Explore', '', ''),
+('principiosYValores', 1, 'principiosYValores', '<b>Principles and</b><br>Corporate Values', '', 'UNICAB is a formal education institution that strives for the comprehensive development of each and every one of its students; but when we talk about development, we move to a completely innovative context, because it is here where, through our curricular structure,<i> development is the autonomous and conscious result of the student in terms of a defined learning process and a flexible, dynamic, and relevant teaching methodology based on ethical principles so that, together with the development of capacities, skills, and abilities in specific areas</i>, they can have excellent performance and project a harmonious life project with identity, which corresponds to their dreams, aspirations, and abilities.'),
+('cartiHome', 0, 'cartiHome', '<b>CARTI</b> Explore', '', ''),
 
 ('busqueda', 1, 'blog', '<span class="font-roboto-black">Celebrating Achievements and</span><br>Sharing Experiences', '', ''),
 ('noticias', 1,'blog', 'Featured News', '', ''),
@@ -66,10 +66,10 @@ INSERT INTO tbl_secciones (seccion, visible, paginaPadre, titulo, subTitulo, tex
 INSERT INTO tbl_secciones (seccion, visible, paginaPadre, titulo, subTitulo, texto) VALUES 
 ('BlogPost', 1, 'blogpost', '', '', ''),
 ('Presaberes', 1, 'presaberes', 'Pre-assessment', '(It is recommended to use browsers other than Internet Explorer)', ''),
-('pagos', '1', 'admisiones', '', '', '');
+('pagos', '0', 'admisiones', '', '', '');
 
 INSERT INTO tbl_secciones (seccion, visible, paginaPadre, titulo, subTitulo, texto) VALUES 
-('costos', 1, 'admisiones', '', 'Check here for the latest costs approved by the Sogamoso Education Secretariat', '(Year 2024)');
+('costos', 0, 'admisiones', '', 'Check here for the latest costs approved by the Sogamoso Education Secretariat', '(Year 2024)');
 
 UPDATE tbl_secciones SET titulo = 'Featured News' WHERE id = 32;
 UPDATE tbl_secciones SET titulo = 'Featured News' WHERE id = 8;

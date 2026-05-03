@@ -393,7 +393,7 @@
                               <div class="row m-0 justify-content-center">
                                    <div class="col-lg-4 col-md-4"></div>
                                    <div class="col-lg-4 col-md-4 col-sm-12 col-12">
-                                        <button type="submit" id="send_blog_comment" class="border-none bg-green tx-white rounded-3 border-0 w-100 p-3 font-roboto-black">'.$enviarBoton['texto'].'</button>
+                                        <button type="submit" id="send_blog_comment" class="border-none bg-pink tx-white rounded-3 border-0 w-100 p-3 font-roboto-black">'.$enviarBoton['texto'].'</button>
                                    </div>
                                    <div class="col-lg-4 col-md-4"></div>
                               </div>

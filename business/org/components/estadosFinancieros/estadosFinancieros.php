@@ -24,7 +24,7 @@ foreach ($datos_estados_financieros as $row_datos_estados_financieros) {
     $html_row_one = '<div class="row p-0 m-0">';
     $html_row_one .= '<div class="col-lg-1 col-md-1 col-sm-1 col-1 p-0"></div>';
     $html_row_one .= '<div class="col-lg-10 col-md-7 col-sm-7 col-7 p-0">';
-    $html_row_one .= '<h3-financieros class="tx-blue font-roboto-light-title">' . $row_datos_estados_financieros['titulo'] . '</h3-financieros>';
+    $html_row_one .= '<h3-financieros class="tx-dark-blue font-roboto-light-title">' . $row_datos_estados_financieros['titulo'] . '</h3-financieros>';
     $html_row_one .= '</div>';
     $html_row_one .= '<div class="col-lg-1 col-md-4 col-sm-4 col-4 p-0"></div>';
     $html_row_one .= '</div>';

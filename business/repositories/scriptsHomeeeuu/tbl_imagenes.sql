@@ -53,8 +53,8 @@ INSERT INTO tbl_imagenes (id_seccion, ruta, rutaMovil, rutaTabletaVertical, ruta
 (7, 'assets/img/investigacion.png', '', '', '', 'investigacion', 'Investigation', 'derecha', '', ''),
 (8, 'assets/img/conectados.png', '', '', '', 'conectados', '', '', '', ''),
 (8, 'assets/img/enviar.png', '', '', '', 'Subscribe', '', 'derecha', '', ''),
-(9, 'assets/img/unicab.png', '', '', '', 'logoUnicab', '', '', '', ''),
-(10, 'assets/img/unicab.png', '', '', '', 'logo', 'Unicab Virtual College', '', 'https://thriveusa.org/', ''),
+(9, 'assets/img/Logo_thrive.png', '', '', '', 'logoUnicab', '', '', '', ''),
+(10, 'assets/img/Logo_thrive_negativo.png', '', '', '', 'logo', 'Unicab Virtual College', '', 'https://thriveusa.org/', ''),
 (10, 'assets/img/carti_explora.png', '', '', '', 'logo', 'CARTI Explore', '', 'https://thriveusa.org/business/cartiExplora/pages/cartiHome.php','' ),
 (10, 'assets/img/unicab_solutions.png', '', '', '', 'logo', 'UNICAB Solutions', '', 'https://thriveusa.org/business/solutions/pages/somos.php', ''),
 
@@ -127,6 +127,7 @@ INSERT INTO tbl_imagenes (id_seccion, ruta, rutaMovil, rutaTabletaVertical, ruta
 (29, 'assets/img/solutions-icon-sistemas.png', '', '', '', 'icono', 'Freedom', 'derecha', '', ''),
 (29, 'assets/img/equidad.png', '', '', '', 'Icono', 'Equity', 'derecha', '', ''),
 (29, 'assets/img/responsabilidad.png', '', '', '', 'Icono', 'Responsibility', 'derecha', '', ''),
+(29, 'assets/img/responsabilidad.png', '', '', '', 'Icono', 'Liberty', 'derecha', '', ''),
 
 (30, 'assets/img/Banner_carti.png', '', '', '', 'Banner', '', '', '', ''),
 (30, 'assets/img/explorador.png', '', '', '', 'Explorer image', '', '', '', ''),

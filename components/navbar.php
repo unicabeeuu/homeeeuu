@@ -69,9 +69,9 @@ if (empty($menuPrincipal) && $mysqli1->error) {
         // --- Inicio de <li> y <div class="menu-item"> ---
         if (!empty($linkURL)) {
             $html_base .= '
-                <li class="nav-item bg-aquamarine h-100 py-2 mx-auto py-lg-0 mx-sm-0">
+                <li class="nav-item bg-pink h-100 py-2 mx-auto py-lg-0 mx-sm-0">
                     <div class="menu-item h-100 m-lg-auto px-lg-2 d-lg-flex">
-                        <div class="menu-item-text first-level-link font-roboto-regular tx-white m-auto">
+                        <div class="menu-item-text first-level-link font-roboto-medium tx-white m-auto">
                             <a 
                                 target="' . $destino . '"
                                 class="a-nav" 
@@ -85,7 +85,7 @@ if (empty($menuPrincipal) && $mysqli1->error) {
             $html_base .= '
                 <li class="nav-item h-100 py-2 mx-auto py-lg-0 mx-sm-0">
                     <div class="menu-item h-100 m-lg-auto px-lg-2 d-lg-flex">
-                        <p class="p-nav menu-item-text font-roboto-regular tx-white m-auto">
+                        <p class="p-nav menu-item-text font-roboto-medium tx-dark-blue m-auto">
                             ' . $menuText . '
                             <i class="icon-row fas fa-chevron-down w-auto p-0 mx-2"></i>
                         </p>
@@ -114,13 +114,13 @@ if (empty($menuPrincipal) && $mysqli1->error) {
                 $menuSub1 = htmlspecialchars($rowSub1['menu'], ENT_QUOTES, 'UTF-8');
                 $linkSub1 = $rowSub1[$levelSelect];
 
-                $html_s .= '<li class="dropdown_our-item position-relative font-roboto-regular tx-white mb-2 px-3 text-start" '
+                $html_s .= '<li class="dropdown_our-item position-relative font-roboto-light tx-white mb-2 px-3 text-start" '
                         . 'id="submenu_' . $idItem . '.' . $idSub1 . '">';
 
                 if (!empty($linkSub1)) {
                     $html_s .= '
-                        <a target="' . $rowSub1['destino'] . '" class="a-nav col-lg-12 w-auto text-center text-lg-start my-1 d-block"
-                           href="' . htmlspecialchars($linkSub1, ENT_QUOTES, 'UTF-8') . '">
+                        <a target="' . $rowSub1['destino'] . '" class="a-nav col-lg-12 w-auto text-centerb text-lg-start my-1 d-block"
+                        href="' . htmlspecialchars($linkSub1, ENT_QUOTES, 'UTF-8') . '">
                             ' . $menuSub1 . '
                         </a>';
                 } else {
@@ -133,7 +133,7 @@ if (empty($menuPrincipal) && $mysqli1->error) {
 
                 if (!empty($submenuNivel2)) {
                     $html_s2 .= '<ul class="dropdown_our2 w-100 w-lg-auto" '
-                              . 'id="submenu_' . $idItem . '.' . $idSub1 . '_dropdown_our">';
+                    . 'id="submenu_' . $idItem . '.' . $idSub1 . '_dropdown_our">';
                     $count_sub2 = 0;
                     foreach ($submenuNivel2 as $rowSub2) {
                         if ($count_sub2 % 6 === 0) {
@@ -146,7 +146,7 @@ if (empty($menuPrincipal) && $mysqli1->error) {
                         $menuSub2 = htmlspecialchars($rowSub2['menu'], ENT_QUOTES, 'UTF-8');
                         $linkSub2 = $rowSub2[$levelSelect];
 
-                        $html_s2 .= '<li class="dropdown_our-item position-relative font-roboto-regular tx-white mb-2 px-3 text-start">';
+                        $html_s2 .= '<li class="dropdown_our-item position-relative font-roboto-light tx-white mb-2 px-3 text-start">';
                         $html_s2 .= '<a class="a-nav" href="' . htmlspecialchars($linkSub2, ENT_QUOTES, 'UTF-8') . '">';
                         $html_s2 .= $menuSub2;
                         $html_s2 .= '</a>';
@@ -192,10 +192,10 @@ $logoWidth  = 48;//37
 $html_logo = '
     <a class="unicab-brand" href="' . $prefix . 'index.php">
         <img 
-          src="' . rutaPorNivel($ruta_logo) . '" 
-          alt="" 
-          width="' . $logoWidth . '" 
-          class="h-auto d-inline-block align-text-center"
+        src="' . rutaPorNivel($ruta_logo) . '" 
+        alt="" 
+        width="' . $logoWidth . '" 
+        class="h-auto d-inline-block align-text-center"
         >
     </a>';
 
@@ -203,7 +203,7 @@ $html_logo = '
 ?>
 <div class="container-fluid m-0 p-0" id="inicio">
     <div class="row m-0 p-0">
-        <nav class="navbar main-nav bg-orange col-12 h-lg-70 p-0">
+        <nav class="navbar main-nav bg-white col-12 h-lg-70 p-0">
             <div class="col-12 col-lg-12 h-100 m-auto p-0 d-lg-flex justify-content-between text-start">
                 <div class="m-auto mx-lg-0 ms-lg-5 p-3 p-lg-0 d-flex flex-row justify-content-between align-items-center">
                     <?= $html_logo ?>

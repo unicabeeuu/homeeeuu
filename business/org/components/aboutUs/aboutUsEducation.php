@@ -17,8 +17,8 @@ if (!empty($rowsTitulosEducacion)) {
 
         $html_educacion .= '
             <div class="mt-lg-20 mb-lg-3 mb-ws d-flex flex-column gap-3 ms-lg-0 ms-4">
-                <h2-nosotros class="tx-blue font-roboto-light-title">' . $titulo . '</h2-nosotros>
-                <h3-nosotros class="tx-black font-roboto-bold">' . $subTitulo . '</h3-nosotros>
+                <h2-nosotros class="tx-dark-blue font-roboto-light-title">' . $titulo . '</h2-nosotros>
+                <h3-nosotros class="tx-blue-h2 font-roboto-bold">' . $subTitulo . '</h3-nosotros>
             </div>';
     }
     $html_educacion .= '</div>';
