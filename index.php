@@ -25,6 +25,7 @@
         include('components/linksZone.php');
         include('components/conectadosBlog.php');
         include('components/footer.php');
+        include('components/footerEEUU.php');
         include('components/bookstoresMain.php');
     ?>  
 <body>
