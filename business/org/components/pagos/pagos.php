@@ -169,10 +169,9 @@
                             '</div>'.
                         '</div>'.
                         '<div class="col-lg-4 col-md-6 col-sm-6 col-6 columna-2-pagos">'.
-                            '<div class="d-flex justify-content-center">'.
-                                '<a href="'. $imagenPagoAmigo['enlace'] .'" target="_blank">
-                                    <img class="mipagoamigo-pagos img-fluid w-100" ' . ImageAttributeBuilder::buildAttributes($nivel, $imagenPagoAmigo['ruta'], $imagenPagoAmigo['descripcion']) . '>
-                                </a>'.
+                            '<div>'.
+                                '<img class="mipagoamigo-pagos img-fluid w-100" ' . ImageAttributeBuilder::buildAttributes($nivel, $imagenPagoAmigo['ruta'], $imagenPagoAmigo['descripcion']) . '>'.
+                                '<a class = "btn-payments" href="'. $imagenPagoAmigo['enlace'] .'" target="_blank" p class="title-instructivo-pagos">Click to pay</a>'.
                             '</div>'.
                             '<div class="d-flex justify-content-center">'.
                                 //'<button class="mipagoamigo-btn-pagos" id="' . $btnPagoAmigo['campo'] . '" type="' . $btnPagoAmigo['tipo'] . '">' . $btnPagoAmigo['texto'] . '</button>'.

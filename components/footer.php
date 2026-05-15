@@ -200,9 +200,9 @@ foreach ($entidadesDatos as $filaEnt) {
         <div class="text-center mb-3 mb-lg-0 mb-md-0">
             <div>
                 <img src="' . $rutaImg . '" 
-                     alt="' . $tituloEnt . '" 
-                     class="img-fluid" 
-                     style="height:' . $alturaEnt . 'px;width:auto;">
+                    alt="' . $tituloEnt . '" 
+                    class="img-fluid" 
+                    style="height:' . $alturaEnt . 'px;width:auto;">
             </div>
             <p4-footer class="entidades-tx m-0 m-auto font-roboto-light tx-white py-1">'
                 . $tituloEnt .

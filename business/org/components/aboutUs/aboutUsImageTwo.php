@@ -24,7 +24,6 @@ if (!empty($filasNosotrosTitulo)) {
         // Título en una fila completa centrada
         $html_nosotrosImgDos .= '
             <div class="col-9 tx-dark-blue font-roboto-light-title mb-ws p-0 m-0">
-                <h1-nosotros>' . $title . '</h1-nosotros>
             </div>';
 
         $html_nosotrosImgDos .= '<div class="col-2 p-0 m-0"></div>';

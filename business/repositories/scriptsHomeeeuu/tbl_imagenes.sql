@@ -91,7 +91,7 @@ INSERT INTO tbl_imagenes (id_seccion, ruta, rutaMovil, rutaTabletaVertical, ruta
 (18, 'assets/img/elearning_5466286.svg', '', '', '', 'E-learning', '', '', '', 'E-learning'),
 (20, 'assets/img/paper_14969976.svg', '', '', '', 'PDF', '', '', '', 'PDF'),
 
-(21, 'assets/img/entidades.png', '', '', '', '', 'Foundation', 'abajo', '', ''),
+(21, 'assets/img/entidades1.png', '', '', '', '', 'Foundation', 'abajo', '', ''),
 (21, 'assets/img/trofeo.png', '', '', '', '', '2002-2003', 'abajo', '', ''),
 (21, 'assets/img/trofeo.png', '', '', '', '', '2004-2007', 'abajo', '', ''),
 (21, 'assets/img/trofeo.png', '', '', '','', '2007-2008', 'abajo', '', ''),
@@ -127,7 +127,7 @@ INSERT INTO tbl_imagenes (id_seccion, ruta, rutaMovil, rutaTabletaVertical, ruta
 (29, 'assets/img/solutions-icon-sistemas.png', '', '', '', 'icono', 'Freedom', 'derecha', '', ''),
 (29, 'assets/img/equidad.png', '', '', '', 'Icono', 'Equity', 'derecha', '', ''),
 (29, 'assets/img/responsabilidad.png', '', '', '', 'Icono', 'Responsibility', 'derecha', '', ''),
-(29, 'assets/img/responsabilidad.png', '', '', '', 'Icono', 'Liberty', 'derecha', '', ''),
+(29, 'assets/img/libertad.png', '', '', '', 'Icono', 'Liberty', 'derecha', '', ''),
 
 (30, 'assets/img/Banner_carti.png', '', '', '', 'Banner', '', '', '', ''),
 (30, 'assets/img/explorador.png', '', '', '', 'Explorer image', '', '', '', ''),
@@ -202,7 +202,7 @@ INSERT INTO tbl_imagenes (id_seccion, ruta, rutaMovil, rutaTabletaVertical, ruta
 (37, 'assets/img/liked.png', '', '', '', '', '', '', '', ''),
 (10, 'assets/img/sumertic.png', '', '', '', 'aliados', 'Our Allies', '', '', ''),
 (10, 'assets/img/linkedin.svg', '', '', '', 'social-media', 'linkedin', '', '', ''),
-(10, 'assets/img/tiktok.svg', '', '', '', 'social-media', 'tiktok', '', '', '');
+(10, 'assets/img/tiktok.png', '', '', '', 'social-media', 'tiktok', '', '', '');
 
 
 DELETE FROM tbl_imagenes WHERE id = 142 AND ruta = 'assets/img/pagos/ref_pago.png';

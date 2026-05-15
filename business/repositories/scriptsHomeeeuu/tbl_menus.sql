@@ -63,3 +63,5 @@ UPDATE tbl_menus SET visible = 0 WHERE padre = 3 AND id != 24;
 
 UPDATE tbl_menus SET visible = 0 WHERE id = 2;
 UPDATE tbl_menus SET visible = 0 WHERE id = 3;
+UPDATE tbl_menus SET visible = 0 WHERE id = 30;
+UPDATE tbl_menus SET visible = 0 WHERE id = 31;

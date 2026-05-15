@@ -49,7 +49,7 @@ INSERT INTO tbl_secciones (seccion, visible, paginaPadre, titulo, subTitulo, tex
 ('estadosFinancieros', 1, '','<b>STATES</b> FINANCIAL', '', ''),
 ('solicitudesCertificaciones', 1, '','<b>APPLICATIONS FOR</b> CERTIFICATIONS AND PAPERS', '', ''),
 
-('nuestrosEstudiantes', 1, 'nuestrosEstudiantes', '<b>Our</b><br>Students', '', ''),
+('nuestrosEstudiantes', 1, 'nuestrosEstudiantes', '<b>Our</b><br><span style="color:#0B77B3;">Students</span>', '', ''),
 ('publicacionesAcademicas', 1, 'publicacionesAcademicas', '<b>Publications</b> Academics', '', ''),
 ('principiosYValores', 1, 'principiosYValores', '<b>Principles and</b><br>Corporate Values', '', 'UNICAB is a formal education institution that strives for the comprehensive development of each and every one of its students; but when we talk about development, we move to a completely innovative context, because it is here where, through our curricular structure,<i> development is the autonomous and conscious result of the student in terms of a defined learning process and a flexible, dynamic, and relevant teaching methodology based on ethical principles so that, together with the development of capacities, skills, and abilities in specific areas</i>, they can have excellent performance and project a harmonious life project with identity, which corresponds to their dreams, aspirations, and abilities.'),
 ('cartiHome', 0, 'cartiHome', '<b>CARTI</b> Explore', '', ''),
@@ -66,10 +66,10 @@ INSERT INTO tbl_secciones (seccion, visible, paginaPadre, titulo, subTitulo, tex
 INSERT INTO tbl_secciones (seccion, visible, paginaPadre, titulo, subTitulo, texto) VALUES 
 ('BlogPost', 1, 'blogpost', '', '', ''),
 ('Presaberes', 1, 'presaberes', 'Pre-assessment', '(It is recommended to use browsers other than Internet Explorer)', ''),
-('pagos', '0', 'admisiones', '', '', '');
+('pagos', '1', 'admisiones', '', '', '');
 
 INSERT INTO tbl_secciones (seccion, visible, paginaPadre, titulo, subTitulo, texto) VALUES 
-('costos', 0, 'admisiones', '', 'Check here for the latest costs approved by the Sogamoso Education Secretariat', '(Year 2024)');
+('costos', 1, 'admisiones', '', 'Check here for the latest costs approved by the Sogamoso Education Secretariat', '(Year 2024)');
 
 UPDATE tbl_secciones SET titulo = 'Featured News' WHERE id = 32;
 UPDATE tbl_secciones SET titulo = 'Featured News' WHERE id = 8;
