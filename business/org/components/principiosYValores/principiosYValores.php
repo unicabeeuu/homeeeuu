@@ -154,7 +154,7 @@
                 $html .=             '<div class="d-flex justify-content-between align-items-center" id="btn-principios-container">';
                 $html .=                 '<hr class="principios-line">';
                 $html .=                 '<a style="color: white" class="btn-principios" role="button" '
-                             . 'onclick="leerMasPrincipios(\'' . $imagenes[$i]['titulo'] . '-' . $i . '\', this)">Leer más</a>';
+                            . 'onclick="leerMasPrincipios(\'' . $imagenes[$i]['titulo'] . '-' . $i . '\', this)">Read more</a>';
                 $html .=             '</div>';
                 $html .=         '</div>';
                 $html .=     '</div>';

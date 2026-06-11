@@ -1,7 +1,7 @@
 <?php
 
     function añadirNivelARuta($nivel, $ruta) {
-         if ($nivel == "raiz") {
+        if ($nivel == "raiz") {
             $nuevaRuta = ' src="' . $ruta . '"';
             return $nuevaRuta;
         } else if ($nivel == "uno") {
@@ -46,7 +46,7 @@
 
 
     $html = '<div id="carouselExampleAutoplaying" class="carousel slide carousel-fade" data-bs-ride="carousel">
-                 <div class="carousel-indicators home-indicators">';
+                <div class="carousel-indicators home-indicators">';
 
     // Genera un indicador de carrusel por imagen
     // El primer indicador debe tener la clase "active" el resto no

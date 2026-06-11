@@ -90,7 +90,7 @@ foreach ($imagenesFooter as $idx => $imagen) {
                      target="' . $target . '">
             </div>
             </a>
-            <p2-footer class="font-roboto-medium m-0 pt-1 lh-sm tx-orange">'
+            <p2-footer class="font-roboto-medium m-0 pt-1 lh-sm tx-pink">'
                 . $tituloClean .
             '</p2-footer>
         </div>';
@@ -183,7 +183,7 @@ $entities = '
     <div class="col-10 col-md-11 d-flex flex-column flex-lg-row flex-md-row align-items-center align-items-lg-end align-items-md-end m-auto my-4 justify-content-between">
         <div class="text-center mb-3 mb-lg-0">
             <p4-footer class="entidades-tx m-auto font-roboto-light tx-white py-1">
-                <b>Entidades que nos vigilan:</b>
+                <b>Entities that monitor us:</b>
             </p4-footer>
         </div>';
 
@@ -200,9 +200,9 @@ foreach ($entidadesDatos as $filaEnt) {
         <div class="text-center mb-3 mb-lg-0 mb-md-0">
             <div>
                 <img src="' . $rutaImg . '" 
-                     alt="' . $tituloEnt . '" 
-                     class="img-fluid" 
-                     style="height:' . $alturaEnt . 'px;width:auto;">
+                    alt="' . $tituloEnt . '" 
+                    class="img-fluid" 
+                    style="height:' . $alturaEnt . 'px;width:auto;">
             </div>
             <p4-footer class="entidades-tx m-0 m-auto font-roboto-light tx-white py-1">'
                 . $tituloEnt .
@@ -226,7 +226,7 @@ $html_copyright = $entities;
 foreach ($copyrightDatos as $filaCopy) {
     $textoCopy = $filaCopy['t1'];
     $html_copyright .= '
-        <p4-footer class="terminos-condiciones-footer text-center m-auto font-roboto-light tx-white">'
+        <p4-footer class="terminos-condiciones-footer text-center m-auto font-roboto-regular tx-white">'
             . $textoCopy .
         '</p4-footer>';
 }
@@ -239,7 +239,7 @@ foreach ($copyrightDatos as $filaCopy) {
 
 <div class="container-fluid p-0 m-0">
     <div class="row w-100 p-0 m-0">
-        <footer class="w-100 p-0 m-0 bg-bold-blue">
+        <footer class="w-100 p-0 m-0 bg-dark-blue">
             <!-- PRIMER FOOTER: IMÁGENES + CONTACTO + REDES + ALIADOS -->
             <div class="first-footer mt-5 col-11 m-auto d-flex flex-column tx-white justify-content-end pb-5">
                 <div class="d-flex flex-column flex-lg-row flex-md-row justify-content-md-center align-items-md-center">
@@ -249,8 +249,8 @@ foreach ($copyrightDatos as $filaCopy) {
                     <!-- 9.2) CONTACTO + REDES + UBICACIÓN -->
                     <div class="row col-12 col-lg-5 col-md-3 d-flex flex-column pt-4 w-auto mx-auto">
                         <div class="d-flex flex-column mb-3 mx-auto">
-                            <p-footer class="lh-sm .llamanos-escribenos font-roboto-bold text-center text-md-start text-lg-center my-0 mx-auto mx-md-0 mx-lg-auto tx-white">
-                                Llámanos o escríbenos
+                            <p-footer class="lh-sm .llamanos-escribenos font-roboto-thinitalic text-center text-md-start text-lg-center my-0 mx-auto mx-md-0 mx-lg-auto tx-white">
+                                Call us or write to us
                             </p-footer>
                             <h5-footer class="numero-telefono lh-sm font-roboto-bolditalic text-center text-md-start text-lg-center my-0 mx-auto mx-md-0 mx-lg-auto tx-white">
                                 <?php echo $tel; ?>
@@ -261,10 +261,10 @@ foreach ($copyrightDatos as $filaCopy) {
                         </div>
                         <div id="info" class="d-flex flex-column w-auto mx-auto">
                             <p1-footer class="encuentranos font-roboto-bolditalic text-center text-md-start text-lg-center my-0 mx-auto mx-md-0 mx-lg-auto">
-                                Encuéntranos
+                                Find us
                             </p1-footer>
                             <?php echo $hmtl_social_media; ?>
-                            <p-footer class="direccion-unicab-footer font-roboto-light text-center text-md-start text-lg-center mx-auto mx-md-0 mx-lg-auto mt-4 mb-0 tx-white">
+                            <p-footer class="direccion-unicab-footer font-roboto-bold text-center text-md-start text-lg-center mx-auto mx-md-0 mx-lg-auto mt-4 mb-0 tx-white">
                                 <?php echo $direccion; ?>
                             </p-footer>
                             <p-footer class="direccion-unicab-footer font-roboto-light text-center text-md-start text-lg-center mx-auto mx-md-0 mx-lg-auto my-0 pb-3 tx-white">
@@ -279,7 +279,7 @@ foreach ($copyrightDatos as $filaCopy) {
             </div>
 
             <!-- SEGUNDO FOOTER: ENTIDADES + COPYRIGHT -->
-            <div class="second-footer d-flex flex-column bg-orange w-100 pb-4" id="entidadesVigilan">
+            <div class="second-footer d-flex flex-column bg-dark-blue w-100 pb-4" id="entidadesVigilan" style="background-color: #222A75; box-shadow: 0 -4px 6px rgba(0,0,0,0.2);">
                 <?php echo $html_copyright; ?>
             </div>
         </footer>

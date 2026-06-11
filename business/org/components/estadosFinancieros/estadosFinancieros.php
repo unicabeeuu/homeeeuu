@@ -24,7 +24,7 @@ foreach ($datos_estados_financieros as $row_datos_estados_financieros) {
     $html_row_one = '<div class="row p-0 m-0">';
     $html_row_one .= '<div class="col-lg-1 col-md-1 col-sm-1 col-1 p-0"></div>';
     $html_row_one .= '<div class="col-lg-10 col-md-7 col-sm-7 col-7 p-0">';
-    $html_row_one .= '<h3-financieros class="tx-blue font-roboto-light-title">' . $row_datos_estados_financieros['titulo'] . '</h3-financieros>';
+    $html_row_one .= '<h3-financieros class="tx-dark-blue font-roboto-light-title">' . $row_datos_estados_financieros['titulo'] . '</h3-financieros>';
     $html_row_one .= '</div>';
     $html_row_one .= '<div class="col-lg-1 col-md-4 col-sm-4 col-4 p-0"></div>';
     $html_row_one .= '</div>';
@@ -33,7 +33,7 @@ foreach ($datos_estados_financieros as $row_datos_estados_financieros) {
     $html_row_two .= '<div class="col-lg-1 col-md-0 col-sm-0 col-0 p-0"></div>';
     $html_row_two .= '<div class="btn-financiero d-flex flex-row col-lg-3 col-md-12 col-sm-12 col-12 p-0">';
     $html_row_two .= '<div class="col-2 p-0 m-0 bg-orange"></div>';
-    $html_row_two .= '<p class="p-3 font-roboto-bolditalic tx-white m-0 p-0">Solicitar información</p>';
+    $html_row_two .= '<p class="p-3 font-roboto-bolditalic tx-white m-0 p-0">Request information</p>';
     $html_row_two .= '</div>';
     $html_row_two .= '<div class="col-lg-8 col-md-0 col-sm-0 col-0 p-0"></div>';
     $html_row_two .= '</div>';
