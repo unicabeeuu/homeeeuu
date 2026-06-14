@@ -8,13 +8,13 @@
 <html lang="en">
 <?php 
     $nivel = "raiz";
-    $page_title = "Home UNICAB";
+    $page_title = "Home THRIVE";
     include('components/headMain.php');
 ?>
 <body>
     <?php 
         $nivel = "raiz";
-        include('components/navBar.php');
+        include('components/navbar.php');
         include('components/botonFlotante.php');
         include('components/bannerCarrousel.php');
         include('components/academicOffer.php');
@@ -25,6 +25,7 @@
         include('components/linksZone.php');
         include('components/conectadosBlog.php');
         include('components/footer.php');
+        include('components/footerEEUU.php');
         include('components/bookstoresMain.php');
     ?>  
 <body>

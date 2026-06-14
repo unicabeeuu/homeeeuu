@@ -43,8 +43,8 @@
                <main class="container nuestroModelo-section">
                     <div class="row">
                          <div class="col-lg-12 col-md-12 col-sm-12 col-12">
-                              <h2 class="nuestroModelo-title tx-orange font-roboto-black">'.$row_datos_seccion['titulo'].'</h2>
-                              <h2 class="nuestroModelo-secondTitle tx-blue font-roboto-light"> <span class="font-roboto-black">'.$titulo.'</span> <br> '.$subtitulo.' </h2>
+                              <h2 class="nuestroModelo-title tx-dark-blue font-roboto-black">'.$row_datos_seccion['titulo'].'</h2>
+                              <h2 class="nuestroModelo-secondTitle tx-dark-blue font-roboto-light"> <span class="font-roboto-black">'.$titulo.'</span> <br> '.$subtitulo.' </h2>
                          </div>
                     </div>
           ';

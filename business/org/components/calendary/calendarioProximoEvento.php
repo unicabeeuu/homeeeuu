@@ -17,7 +17,7 @@ if (!empty($rowsVisible)) {
                           . $row_data_visible['titulo'] .
                           '</h4-calendario>';
         if (empty($rowsEvents)) {
-          $html_row_one .= '<p-calendario class="tx-white text-center py-5">No hay eventos próximos</p-calendario>';
+          $html_row_one .= '<p-calendario class="tx-white text-center py-5">There are no upcoming events</p-calendario>';
         } else {
             // Iniciamos el carrusel
             $html_row_one .= '

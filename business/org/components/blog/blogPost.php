@@ -305,12 +305,12 @@
                <div class="d-lg-none d-md-none d-block order-last"></div>
                <aside class="col-lg-4 col-md-4 col-sm-12 col-12 flex-column gap-5 ps-lg-5 order-last mb-lg-0 mb-5 d-flex d-md-flex d-sm-none d-none">
                     <div class="d-flex flex-column align-items-center bg-white px-3 py-4">
-                         <p class="font-roboto-bold d-block">Siguenos en Facebook</p>
+                         <p class="font-roboto-bold d-block">Follow us on Facebook</p>
                          <iframe name="f68d834d7301a08bb" width="1000px" height="1000px" data-testid="fb:page Facebook Social Plugin" title="fb:page Facebook Social Plugin" frameborder="0" allowtransparency="true" allowfullscreen="true" scrolling="no" allow="encrypted-media" src="https://www.facebook.com/v5.0/plugins/page.php?adapt_container_width=true&amp;app_id=&amp;channel=https%3A%2F%2Fstaticxx.facebook.com%2Fx%2Fconnect%2Fxd_arbiter%2F%3Fversion%3D46%23cb%3Df61df77fa7a2c9a63%26domain%3Dunicab.org%26is_canvas%3Dfalse%26origin%3Dhttps%253A%252F%252Funicab.org%252Ffec1659497d47cfb9%26relation%3Dparent.parent&amp;container_width=260&amp;hide_cover=false&amp;href=https%3A%2F%2Fwww.facebook.com%2Funicabvir%2F&amp;locale=es_LA&amp;sdk=joey&amp;show_facepile=false&amp;small_header=false&amp;tabs=timeline&amp;width=" style="border: none; visibility: visible; width: 260px; height: 500px;" class=""></iframe>
                               
                     </div>
                     <div class="d-flex flex-column align-items-center bg-white p-4">
-                         <p class="font-roboto-bold d-block">Ultimos articulos</p>
+                         <p class="font-roboto-bold d-block">Latest articles</p>
                          ';
                          $blogCount = 0;
                          foreach ($newestBlogs as $blog) {
@@ -337,7 +337,7 @@
 
                     $html .= '</div>
                     <div class="d-flex flex-column align-items-center bg-white p-4">
-                         <p class="font-roboto-bold d-block">Enlaces de interes</p>
+                         <p class="font-roboto-bold d-block">Links of interest</p>
                          <div class="d-flex flex-wrap">';
 
                          foreach ($linksAside as $actualLink) {
@@ -366,7 +366,7 @@
                     <div class="col-lg-3 col-md-3"></div>
                     <div class="col-lg-6 col-md-6 col-sm-12 col-12">
                          <form class="d-flex flex-column gap-3 border-green px-0 pb-3" id="comentariosCampos" data-form-instance data-form-configuracion=\'{"botonSubmit": "send_blog_comment"}\' >
-                              <h4 class="">Dejame tu comentario</h4>
+                              <h4 class="">Leave me your comment</h4>
 
                               <div class="row m-0 justify-content-center">
                                    <div class="col-lg-12 col-md-12 col-sm-12 col-12">
@@ -393,7 +393,7 @@
                               <div class="row m-0 justify-content-center">
                                    <div class="col-lg-4 col-md-4"></div>
                                    <div class="col-lg-4 col-md-4 col-sm-12 col-12">
-                                        <button type="submit" id="send_blog_comment" class="border-none bg-green tx-white rounded-3 border-0 w-100 p-3 font-roboto-black">'.$enviarBoton['texto'].'</button>
+                                        <button type="submit" id="send_blog_comment" class="border-none bg-pink tx-white rounded-3 border-0 w-100 p-3 font-roboto-black">'.$enviarBoton['texto'].'</button>
                                    </div>
                                    <div class="col-lg-4 col-md-4"></div>
                               </div>
@@ -424,10 +424,10 @@
                     <div class="col-lg-8 col-md-8 col-sm-12 col-12">
                          <div class="row">
                               <div class="col-lg-8 col-md-8 col-sm-6 col-6">
-                                   <p class="font-roboto-bolditalic">Comentario</p>
+                                   <p class="font-roboto-bolditalic">Comment</p>
                               </div>
                               <div class="col-lg-4 col-md-4 col-sm-6 col-6">
-                                   <p class="font-roboto-bolditalic">Correo - Fecha</p>
+                                   <p class="font-roboto-bolditalic">Email - Date</p>
                               </div>
                          </div>
                     </div>

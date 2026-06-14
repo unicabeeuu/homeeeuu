@@ -15,7 +15,7 @@ if (!empty($rowsTexto)) {
         $html_row_one = '<div class="row col-12 mx-auto p-0 m-0">';
         $html_row_one .= '<div class="col-lg-1 col-1 p-0"></div>';
         $html_row_one .= '<div class="col-lg-7 col-9 p-0">';
-        $html_row_one .= '  <h2-nosotros class="font-roboto-light-title tx-blue text-start">'
+        $html_row_one .= '  <h2-nosotros class="font-roboto-light-title tx-dark-blue text-start">'
                             . $titulo .
                             '</h2-nosotros>';
         $html_row_one .= '</div>';
