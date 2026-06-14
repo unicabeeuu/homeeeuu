@@ -247,3 +247,7 @@ INSERT INTO tbl_sentencias (utilizaJoin, joinTablas, campos, tablas, condiciones
 ('NO','','SELECT * ','FROM tbl_parametros ','WHERE parametro = |terminos_condiciones| ','','','','',''),
 ('NO','','SELECT * ','FROM tbl_parametros ','WHERE parametro = |copyright| ','','','','','')
 ;
+
+INSERT INTO tbl_sentencias (utilizaJoin, joinTablas, campos, tablas, condiciones, agrupaciones, ordenamientos, modificaciones, condicionesAgrupaciones, inserciones) VALUES
+('NO','','SELECT * ','FROM tbl_enlaces_footer ','','','','','','')
+;
