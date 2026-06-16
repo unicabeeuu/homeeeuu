@@ -17,7 +17,7 @@ INSERT INTO tbl_menus (menu, nivel, padre, icono, linkNivelRaiz, linkNivelTres, 
 ('CARTI Explore', '', '', '', '', '',''),
 ('UNICAB Solutions', '' ,'', '', '', '', ''),
 ('Admissions', '', '', '', '', '', ''),
-('Virtual Classroom', '', '', '', 'https://aulavirtual.unicab.org/login/', 'https://aulavirtual.unicab.org/login/', '_blank'),
+('Virtual Classroom', '', '', '', 'https://campus.thriveusa.org/login/index.php', 'https://campus.thriveusa.org/login/index.php', '_blank'),
 ('Academic Record', '', '', '', 'https://unicab.org/login_registro.php', 'https://unicab.org/login_registro.php', '_blank'),
 ('Email', '', '', '', 'https://mail.google.com/a/unicab.org/', 'https://mail.google.com/a/unicab.org/', '_blank'),
 
