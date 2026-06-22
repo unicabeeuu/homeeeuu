@@ -2,9 +2,7 @@
 /**
  * footerEEUU.php
  * 
- * Diseño propio de THRIVE Global Academy (imagen de referencia).
  * Lógica de redes sociales tomada de footer.php (sentencias 36 y 37)
- * para que los links de instagram, tiktok, youtube y facebook funcionen.
  * SIN sección de aliados.
  * Asume que $nivel y $mysqli1 ya están disponibles.
  */
@@ -39,7 +37,7 @@ $repoPrefix  = $nivelMap[$nivel]['repo_prefix'];
 $levelSelect = $nivelMap[$nivel]['link_class'];
 
 require_once "{$repoPrefix}business/repositories/1cc2s4Home.php";
-require_once __DIR__ . '/auxiliares.php'; 
+require_once __DIR__ . '/auxiliares.php';
 
 // -----------------------------
 // 2) OBTENER DATOS DE CONTACTO
@@ -65,39 +63,35 @@ foreach ($imagenesDatos as $fila) {
 
 // -----------------------------
 // 4) REDES SOCIALES
-// Misma lógica de footer.php: sentencia 37 para links, sentencia 36 para imágenes
-// Filtrar solo: facebook, instagram, youtube, tiktok
 // -----------------------------
 
 $redesPermitidas = ['facebook', 'instagram', 'youtube', 'tiktok'];
 
-// 4.1) Obtener links (sentencia 37: parametro -> t1)
+// 4.1) Links (sentencia 37)
 $linksDatos = obtenerFilas($mysqli1, $sentencia, 37);
 $linksMap   = [];
 foreach ($linksDatos as $filaLink) {
     $linksMap[$filaLink['parametro']] = $filaLink['t1'];
 }
 
-// 4.2) Obtener imágenes de redes sociales (sentencia 36)
+// 4.2) Imágenes (sentencia 36)
 $smImagenesDatos = obtenerFilas($mysqli1, $sentencia, 36);
 
-// 4.3) Combinar y filtrar solo las redes permitidas
+// 4.3) Combinar y filtrar
 $smFooter = [];
 foreach ($smImagenesDatos as $filaSM) {
     $titulo = strtolower(trim($filaSM['titulo']));
     if (!in_array($titulo, $redesPermitidas)) {
-        continue; // saltar redes no deseadas
+        continue;
     }
-    $ruta = $filaSM['ruta'];
-    $link = $linksMap[$titulo] ?? '#';
     $smFooter[] = [
-        'ruta'  => $ruta,
+        'ruta'  => $filaSM['ruta'],
         'title' => $titulo,
-        'link'  => $link,
+        'link'  => $linksMap[$titulo] ?? '#',
     ];
 }
 
-// 4.4) Construir HTML de redes sociales
+// 4.4) HTML redes sociales
 $hmtl_social_media = '';
 foreach ($smFooter as $imagen) {
     $rutaImg     = rutaPorNivel($imagen['ruta']);
@@ -114,8 +108,108 @@ foreach ($smFooter as $imagen) {
 }
 
 // -----------------------------
-// 5) COPYRIGHT
-// Sentencia 38: parametro 'terminos_condiciones' y 'copyright'
+// 5) ENLACES DE NAVEGACIÓN (sentencia 172)
+// -----------------------------
+
+$enlacesDatos = obtenerFilas($mysqli1, $sentencia, 172);
+
+$enlacesMap = [];
+foreach ($enlacesDatos as $filaEnlace) {
+    $enlacesMap[(int)$filaEnlace['id']] = $filaEnlace;
+}
+
+// 5.1) Helper: resuelve cualquier tipo de link correctamente
+//   - Links externos (http)     → sin modificar
+//   - Rutas absolutas (/)       → sin modificar
+//   - Anchors (#)               → index.php del nivel + anchor
+//   - Rutas con ../             → limpiar ../ y resolver desde raíz
+//   - Rutas relativas simples   → resolver desde raíz del proyecto
+function resolverLink($link, $repoPrefix) {
+    // Link externo → sin modificar
+    if (strpos($link, 'http') === 0) {
+        return $link;
+    }
+    // Ruta absoluta desde el servidor → sin modificar
+    if (strpos($link, '/') === 0) {
+        return $link;
+    }
+    // Anchor → apuntar al index del nivel correcto
+    if (strpos($link, '#') === 0) {
+        return $repoPrefix . 'index.php' . $link;
+    }
+    // Ruta relativa con ../ → limpiar los ../ primero
+    if (strpos($link, '../') === 0) {
+        $link = preg_replace('/^(\.\.\/)+/', '', $link);
+    }
+    // Ruta relativa simple (con o sin ../ previo) →
+    // resolver siempre desde la raíz del proyecto
+    $scriptDir = dirname($_SERVER['SCRIPT_NAME']);
+    $niveles   = substr_count($repoPrefix, '../');
+    $raiz      = $scriptDir;
+    for ($i = 0; $i < $niveles; $i++) {
+        $raiz = dirname($raiz);
+    }
+    $raiz = rtrim($raiz, '/');
+    return $raiz . '/' . $link;
+}
+
+// 5.2) HTML de EXPLORE — todos abren en nueva pestaña
+$html_explore = '';
+
+// Home
+$html_explore .= '
+    <li class="mb-2">
+        <a href="' . $repoPrefix . 'index.php" target="_blank"
+           class="font-roboto-light tx-white text-decoration-none" style="font-size: 13px;">
+            Home
+        </a>
+    </li>';
+
+// Pedagogical Model
+$html_explore .= '
+    <li class="mb-2">
+        <a href="' . $repoPrefix . 'business/org/pages/modelo.php" target="_blank"
+           class="font-roboto-light tx-white text-decoration-none" style="font-size: 13px;">
+            Pedagogical Model
+        </a>
+    </li>';
+
+// Academic Offer → id 22
+if (isset($enlacesMap[22])) {
+    $e           = $enlacesMap[22];
+    $linkOfertas = resolverLink($e['link'], $repoPrefix);
+
+    $html_explore .= '
+    <li class="mb-2">
+        <a href="' . htmlspecialchars($linkOfertas) . '" target="_blank"
+           class="font-roboto-light tx-white text-decoration-none" style="font-size: 13px;">
+            ' . htmlspecialchars($e['identificacion']) . '
+        </a>
+    </li>';
+}
+
+// 5.3) HTML de ACCESS → ids 23, 24, 25, 26 — todos abren en nueva pestaña
+$accessIds   = [23, 24, 25, 26];
+$html_access = '';
+
+foreach ($accessIds as $accId) {
+    if (!isset($enlacesMap[$accId])) continue;
+
+    $e     = $enlacesMap[$accId];
+    $link  = htmlspecialchars(resolverLink($e['link'], $repoPrefix));
+    $label = htmlspecialchars($e['identificacion']);
+
+    $html_access .= '
+    <li class="mb-2">
+        <a href="' . $link . '" target="_blank"
+           class="font-roboto-light tx-white text-decoration-none" style="font-size: 13px;">
+            ' . $label . '
+        </a>
+    </li>';
+}
+
+// -----------------------------
+// 6) COPYRIGHT (sentencia 38)
 // -----------------------------
 
 $copyrightDatos = obtenerFilas($mysqli1, $sentencia, 38);
@@ -127,12 +221,6 @@ foreach ($copyrightDatos as $filaCopy) {
             . $textoCopy .
         '</p4-footer>';
 }
-
-// -----------------------------
-// 6) SALIDA FINAL (HTML)
-// Diseño igual a la imagen de referencia:
-// [LOGO + descripción + redes] | [EXPLORE] | [ACCESS] | [CONTACTO]
-// -----------------------------
 ?>
 
 <div class="container-fluid p-0 m-0">
@@ -157,22 +245,19 @@ foreach ($copyrightDatos as $filaCopy) {
                             Education without borders to shape the global leaders of tomorrow, from anywhere in the world.
                         </p-footer>
 
-                        <!-- Redes sociales: facebook, instagram, youtube, tiktok -->
                         <div class="d-flex gap-2">
                             <?php echo $hmtl_social_media; ?>
                         </div>
                     </div>
 
-                    <!-- COLUMNA CENTRAL: MENÚS EXPLORE y ACCESS -->
+                    <!-- COLUMNA CENTRAL: EXPLORE + ACCESS -->
                     <div class="col-12 col-lg-4 d-flex justify-content-between">
 
                         <!-- EXPLORE -->
                         <div class="col-auto">
                             <h6-footer class="font-roboto-black tx-pink mb-3" style="font-size: 14px;">EXPLORE</h6-footer>
                             <ul class="list-unstyled">
-                                <li class="mb-2"><a href="#" class="font-roboto-light tx-white text-decoration-none" style="font-size: 13px;">Home</a></li>
-                                <li class="mb-2"><a href="business/org/pages/modelo.php" target="_blank" class="font-roboto-light tx-white text-decoration-none" style="font-size: 13px;">Pedagogical Model</a></li>
-                                <li class="mb-2"><a href="#ofertaAcademica" class="font-roboto-light tx-white text-decoration-none" style="font-size: 13px;">Academic Offer</a></li>
+                                <?php echo $html_explore; ?>
                             </ul>
                         </div>
 
@@ -180,10 +265,7 @@ foreach ($copyrightDatos as $filaCopy) {
                         <div class="col-auto">
                             <h6-footer class="font-roboto-black tx-pink mb-3" style="font-size: 14px;">ACCESS</h6-footer>
                             <ul class="list-unstyled">
-                                <li class="mb-2"><a href="https://aulavirtual.unicab.org/login/" target="_blank" class="font-roboto-light tx-white text-decoration-none" style="font-size: 13px;">Virtual Classroom</a></li>
-                                <li class="mb-2"><a href="https://unicab.org/login_registro.php" target="_blank" class="font-roboto-light tx-white text-decoration-none" style="font-size: 13px;">Academic Records</a></li>
-                                <li class="mb-2"><a href="https://mail.google.com/a/unicab.org/" target="_blank" class="font-roboto-light tx-white text-decoration-none" style="font-size: 13px;">Institutional Email</a></li>
-                                <li class="mb-2"><a href="business/org/pages/pagos.php" target="_blank" class="font-roboto-light tx-white text-decoration-none" style="font-size: 13px;">Tuition Payments</a></li>
+                                <?php echo $html_access; ?>
                             </ul>
                         </div>
                     </div>
@@ -193,10 +275,12 @@ foreach ($copyrightDatos as $filaCopy) {
                         <p-footer class="font-roboto-thinitalic tx-white mb-1" style="font-size: 12px; line-height: 1.2;">
                             Call us or write to us
                         </p-footer>
-                        <h5-footer class="font-roboto-bolditalic tx-white mb-1" style="font-size: 28px; line-height: 1.1; font-weight: bold;">
+                        <h5-footer class="font-roboto-bolditalic tx-white mb-1" 
+                                   style="font-size: 28px; line-height: 1.1; font-weight: bold;">
                             <?php echo $tel; ?>
                         </h5-footer>
-                        <h5-footer class="font-roboto-bolditalic tx-white mb-3" style="font-size: 16px; line-height: 1.2; font-weight: bold;">
+                        <h5-footer class="font-roboto-bolditalic tx-white mb-3" 
+                                   style="font-size: 16px; line-height: 1.2; font-weight: bold;">
                             <?php echo $correo; ?>
                         </h5-footer>
                         <p1-footer class="font-roboto-bolditalic tx-white mb-1" style="font-size: 12px; line-height: 1.3;">
@@ -212,7 +296,8 @@ foreach ($copyrightDatos as $filaCopy) {
             </div>
 
             <!-- SEGUNDO FOOTER: COPYRIGHT -->
-            <div class="second-footer d-flex flex-column bg-dark-blue w-100 pb-4" style="background-color: #222A75; box-shadow: 0 -4px 6px rgba(0,0,0,0.2);">
+            <div class="second-footer d-flex flex-column bg-dark-blue w-100 pb-4" 
+                 style="background-color: #222A75; box-shadow: 0 -4px 6px rgba(0,0,0,0.2);">
                 <?php echo $html_copyright; ?>
             </div>
 
