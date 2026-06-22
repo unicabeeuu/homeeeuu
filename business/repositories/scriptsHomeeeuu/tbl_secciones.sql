@@ -1,3 +1,9 @@
+DROP TABLE IF EXISTS tbl_textos;
+
+DROP TABLE IF EXISTS tbl_formularios;
+
+DROP TABLE IF EXISTS tbl_imagenes;
+
 DROP TABLE IF EXISTS tbl_secciones;
 
 CREATE TABLE tbl_secciones (
@@ -93,3 +99,8 @@ UPDATE tbl_secciones SET visible = 0 WHERE id = 6 AND seccion = 'conoceNuetroCam
 
 UPDATE tbl_secciones SET titulo = '<b>DIRECTORY</b> Institutional' WHERE id = 17;
 UPDATE tbl_secciones SET titulo = '<b>CALENDAR</b> Academic' WHERE id = 18;
+
+INSERT INTO tbl_secciones (seccion, visible, paginaPadre, titulo, subTitulo, texto) VALUES 
+('servicios_carti', 1, 'cartiHome', 'Servicios <b>CARTI</b> Explora', '<b>Aprendizajes para un mundo cambiante</b>', ''),
+('footerEEUU', 1, 'home', '', '', '')
+;
