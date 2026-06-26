@@ -734,7 +734,8 @@
         
         include("../components/resultado_eval_pres1.php");
         
-        include('../../../components/footer.php');
+        //include('../../../components/footer.php');
+        include('../../../components/footerEEUU.php');
         include('../../../components/bookstoresMain.php');
     ?>  
 <body>

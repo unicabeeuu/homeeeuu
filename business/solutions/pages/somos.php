@@ -17,6 +17,7 @@
         include("../components/servicios.php");
 
         //include('../../../components/footer.php');
+        include('../../../components/footerEEUU.php');
         include('../../../components/footerSolutions.php');
         include('../../../components/bookstoresMain.php');
     ?>  

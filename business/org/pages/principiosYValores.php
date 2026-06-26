@@ -16,7 +16,8 @@
         include('../../../components/botonFlotante.php');
 
         include('../components/principiosYValores/principiosYValores.php');
-        include('../../../components/footer.php');
+        //include('../../../components/footer.php');
+        include('../../../components/footerEEUU.php');
         include('../../../components/bookstoresMain.php');
     ?>  
 <body>

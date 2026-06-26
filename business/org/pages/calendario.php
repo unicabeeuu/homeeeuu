@@ -19,7 +19,8 @@
         include('../components/calendary/calendarioAcademico.php'); 
         include('../components/calendary/calendarioProximoEvento.php'); 
         include('../components/calendary/comunicados.php'); 
-        include('../../../components/footer.php');
+        //include('../../../components/footer.php');
+        include('../../../components/footerEEUU.php');
         include('../../../components/bookstoresMain.php');
     ?>
 </body>
