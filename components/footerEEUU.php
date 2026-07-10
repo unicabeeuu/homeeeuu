@@ -1,138 +1,157 @@
 <?php
-/**
- * footerEEUU.php
- * 
- * Diseño propio de THRIVE Global Academy (imagen de referencia).
- * Lógica de redes sociales tomada de footer.php (sentencias 36 y 37)
- * para que los links de instagram, tiktok, youtube y facebook funcionen.
- * SIN sección de aliados.
- * Asume que $nivel y $mysqli1 ya están disponibles.
- */
-
-// -----------------------------
-// 1) DEFINICIONES GENERALES
-// -----------------------------
-
-$nivelMap = [
-    'raiz' => [
-        'repo_prefix' => '',
-        'link_class'  => 'linkNivelRaiz',
-    ],
-    'uno' => [
-        'repo_prefix' => '../',
-        'link_class'  => 'linkNivelUno',
-    ],
-    'dos' => [
-        'repo_prefix' => '../../',
-        'link_class'  => 'linkNivelDos',
-    ],
-    'tres' => [
-        'repo_prefix' => '../../../',
-        'link_class'  => 'linkNivelTres',
-    ],
-];
-
-if (!isset($nivel) || !array_key_exists($nivel, $nivelMap)) {
-    $nivel = 'raiz';
-}
-$repoPrefix  = $nivelMap[$nivel]['repo_prefix'];
-$levelSelect = $nivelMap[$nivel]['link_class'];
-
-require_once "{$repoPrefix}business/repositories/1cc2s4Home.php";
-require_once __DIR__ . '/auxiliares.php'; 
-
-// -----------------------------
-// 2) OBTENER DATOS DE CONTACTO
-// -----------------------------
-
-$tel       = obtenerValorSimple($mysqli1, $sentencia, 13) ?: '';
-$correo    = obtenerValorSimple($mysqli1, $sentencia, 14) ?: '';
-$direccion = obtenerValorSimple($mysqli1, $sentencia, 15) ?: '';
-$ubicacion = obtenerValorSimple($mysqli1, $sentencia, 16) ?: '';
-
-// -----------------------------
-// 3) LOGO DEL FOOTER
-// -----------------------------
-
-$imagenesDatos = obtenerFilas($mysqli1, $sentencia, 34);
-$logoFooter = [];
-foreach ($imagenesDatos as $fila) {
-    if (strpos($fila['descripcion'], 'logo') !== false) {
-        $logoFooter = $fila;
-        break;
-    }
-}
-
-// -----------------------------
-// 4) REDES SOCIALES
-// Misma lógica de footer.php: sentencia 37 para links, sentencia 36 para imágenes
-// Filtrar solo: facebook, instagram, youtube, tiktok
-// -----------------------------
-
-$redesPermitidas = ['facebook', 'instagram', 'youtube', 'tiktok'];
-
-// 4.1) Obtener links (sentencia 37: parametro -> t1)
-$linksDatos = obtenerFilas($mysqli1, $sentencia, 37);
-$linksMap   = [];
-foreach ($linksDatos as $filaLink) {
-    $linksMap[$filaLink['parametro']] = $filaLink['t1'];
-}
-
-// 4.2) Obtener imágenes de redes sociales (sentencia 36)
-$smImagenesDatos = obtenerFilas($mysqli1, $sentencia, 36);
-
-// 4.3) Combinar y filtrar solo las redes permitidas
-$smFooter = [];
-foreach ($smImagenesDatos as $filaSM) {
-    $titulo = strtolower(trim($filaSM['titulo']));
-    if (!in_array($titulo, $redesPermitidas)) {
-        continue; // saltar redes no deseadas
-    }
-    $ruta = $filaSM['ruta'];
-    $link = $linksMap[$titulo] ?? '#';
-    $smFooter[] = [
-        'ruta'  => $ruta,
-        'title' => $titulo,
-        'link'  => $link,
+    $nivelMap = [
+        'raiz' => [
+            'repo_prefix' => '',
+            'link_class'  => 'linkNivelRaiz',
+        ],
+        'uno' => [
+            'repo_prefix' => '../',
+            'link_class'  => 'linkNivelUno',
+        ],
+        'dos' => [
+            'repo_prefix' => '../../',
+            'link_class'  => 'linkNivelDos',
+        ],
+        'tres' => [
+            'repo_prefix' => '../../../',
+            'link_class'  => 'linkNivelTres',
+        ],
     ];
-}
 
-// 4.4) Construir HTML de redes sociales
-$hmtl_social_media = '';
-foreach ($smFooter as $imagen) {
-    $rutaImg     = rutaPorNivel($imagen['ruta']);
-    $tituloClean = $imagen['title'];
-    $linkClean   = $imagen['link'];
-    $height      = $tituloClean === 'youtube' ? 20 : 25;
+    if (!isset($nivel) || !array_key_exists($nivel, $nivelMap)) {
+        $nivel = 'raiz';
+    }
+    $repoPrefix  = $nivelMap[$nivel]['repo_prefix'];
+    $levelSelect = $nivelMap[$nivel]['link_class'];
 
-    $hmtl_social_media .= '
-        <a class="mx-2" href="' . $linkClean . '" target="_blank">
-            <img class="social-media-icon zoom-hover" style="height:' . $height . 'px" 
-                 src="' . $rutaImg . '" 
-                 alt="' . $tituloClean . '">
-        </a>';
-}
+    require_once "{$repoPrefix}business/repositories/1cc2s4Home.php";
+    require_once __DIR__ . '/auxiliares.php'; 
 
-// -----------------------------
-// 5) COPYRIGHT
-// Sentencia 38: parametro 'terminos_condiciones' y 'copyright'
-// -----------------------------
+    // -----------------------------
+    // 2) OBTENER DATOS DE CONTACTO
+    // -----------------------------
 
-$copyrightDatos = obtenerFilas($mysqli1, $sentencia, 38);
-$html_copyright = '';
-foreach ($copyrightDatos as $filaCopy) {
-    $textoCopy = $filaCopy['t1'];
-    $html_copyright .= '
-        <p4-footer class="terminos-condiciones-footer text-center m-auto font-roboto-regular tx-white">'
-            . $textoCopy .
-        '</p4-footer>';
-}
+    $tel       = obtenerValorSimple($mysqli1, $sentencia, 13) ?: '';
+    $correo    = obtenerValorSimple($mysqli1, $sentencia, 14) ?: '';
+    $direccion = obtenerValorSimple($mysqli1, $sentencia, 15) ?: '';
+    $ubicacion = obtenerValorSimple($mysqli1, $sentencia, 16) ?: '';
 
-// -----------------------------
-// 6) SALIDA FINAL (HTML)
-// Diseño igual a la imagen de referencia:
-// [LOGO + descripción + redes] | [EXPLORE] | [ACCESS] | [CONTACTO]
-// -----------------------------
+    // -----------------------------
+    // 3) LOGO DEL FOOTER
+    // -----------------------------
+
+    $imagenesDatos = obtenerFilas($mysqli1, $sentencia, 34);
+    $logoFooter = [];
+    foreach ($imagenesDatos as $fila) {
+        if (strpos($fila['descripcion'], 'logo') !== false) {
+            $logoFooter = $fila;
+            break;
+        }
+    }
+
+    // -----------------------------
+    // 4) REDES SOCIALES
+    // Misma lógica de footer.php: sentencia 37 para links, sentencia 36 para imágenes
+    // Filtrar solo: facebook, instagram, youtube, tiktok
+    // -----------------------------
+
+    $redesPermitidas = ['facebook', 'instagram', 'youtube', 'tiktok'];
+
+    // 4.1) Obtener links (sentencia 37: parametro -> t1)
+    $linksDatos = obtenerFilas($mysqli1, $sentencia, 37);
+    $linksMap   = [];
+    foreach ($linksDatos as $filaLink) {
+        $linksMap[$filaLink['parametro']] = $filaLink['t1'];
+    }
+
+    // 4.2) Obtener imágenes de redes sociales (sentencia 36)
+    $smImagenesDatos = obtenerFilas($mysqli1, $sentencia, 36);
+
+    // 4.3) Combinar y filtrar solo las redes permitidas
+    $smFooter = [];
+    foreach ($smImagenesDatos as $filaSM) {
+        $titulo = strtolower(trim($filaSM['titulo']));
+        if (!in_array($titulo, $redesPermitidas)) {
+            continue; // saltar redes no deseadas
+        }
+        $ruta = $filaSM['ruta'];
+        $link = $linksMap[$titulo] ?? '#';
+        $smFooter[] = [
+            'ruta'  => $ruta,
+            'title' => $titulo,
+            'link'  => $link,
+        ];
+    }
+
+    // 4.4) Construir HTML de redes sociales
+    $hmtl_social_media = '';
+    foreach ($smFooter as $imagen) {
+        $rutaImg     = rutaPorNivel($imagen['ruta']);
+        $tituloClean = $imagen['title'];
+        $linkClean   = $imagen['link'];
+        $height      = $tituloClean === 'youtube' ? 20 : 25;
+
+        $hmtl_social_media .= '
+            <a class="mx-2" href="' . $linkClean . '" target="_blank">
+                <img class="social-media-icon zoom-hover" style="height:' . $height . 'px" 
+                    src="' . $rutaImg . '" 
+                    alt="' . $tituloClean . '">
+            </a>';
+    }
+
+    // -----------------------------
+    // 5) COPYRIGHT
+    // Sentencia 38: parametro 'terminos_condiciones' y 'copyright'
+    // -----------------------------
+
+    $copyrightDatos = obtenerFilas($mysqli1, $sentencia, 38);
+    $html_copyright = '';
+    foreach ($copyrightDatos as $filaCopy) {
+        $textoCopy = $filaCopy['t1'];
+        $html_copyright .= '
+            <p4-footer class="terminos-condiciones-footer text-center m-auto font-roboto-regular tx-white">'
+                . $textoCopy .
+            '</p4-footer>';
+    }
+
+    // Obteniendo Enlaces
+    $sql_datos = "";
+    $res_sentencia = $mysqli1->query($sentencia."172");
+    while($row_sentencia = $res_sentencia->fetch_assoc()){
+         $sql_datos = $row_sentencia['campos'].$row_sentencia['tablas'].str_replace('|', '\'', $row_sentencia['condiciones']);
+    }
+
+    $enlaces_explore_footer = '<div class="col-auto">
+                                <h6-footer class="font-roboto-black tx-pink mb-3" style="font-size: 14px;">EXPLORE</h6-footer>
+                                <ul class="list-unstyled">';
+    $enlaces_access_footer = '<div class="col-auto">
+                                <h6-footer class="font-roboto-black tx-pink mb-3" style="font-size: 14px;">ACCESS</h6-footer>
+                                <ul class="list-unstyled">';
+
+    $res_enlaces = $mysqli1->query($sql_datos);
+    $filas = [];
+    $fila = 1;
+    while ($row_enlaces = $res_enlaces->fetch_assoc()) {
+        $filas[] = $row_enlaces;        
+        if ($fila < 4) {
+            $enlaces_explore_footer .= '<li class="mb-2"><a href="'.$row_enlaces[$levelSelect].'" class="font-roboto-light tx-white text-decoration-none" style="font-size: 13px;" target="'.$row_enlaces['destino'].'">'.$row_enlaces['enlace'].'</a></li>';
+        }
+        else {
+            $enlaces_access_footer .= '<li class="mb-2"><a href="'.$row_enlaces[$levelSelect].'" class="font-roboto-light tx-white text-decoration-none" style="font-size: 13px;" target="'.$row_enlaces['destino'].'">'.$row_enlaces['enlace'].'</a></li>';
+        }
+        $fila++;
+    }
+    $enlaces_explore_footer .= '</ul>
+                        </div>';
+    $enlaces_access_footer .= '</ul>
+                        </div>';
+
+    $a = 1;
+    // -----------------------------
+    // 6) SALIDA FINAL (HTML)
+    // Diseño igual a la imagen de referencia:
+    // [LOGO + descripción + redes] | [EXPLORE] | [ACCESS] | [CONTACTO]
+    // -----------------------------
 ?>
 
 <div class="container-fluid p-0 m-0">
@@ -167,17 +186,18 @@ foreach ($copyrightDatos as $filaCopy) {
                     <div class="col-12 col-lg-4 d-flex justify-content-between">
 
                         <!-- EXPLORE -->
-                        <div class="col-auto">
+                        <!--<div class="col-auto">
                             <h6-footer class="font-roboto-black tx-pink mb-3" style="font-size: 14px;">EXPLORE</h6-footer>
                             <ul class="list-unstyled">
                                 <li class="mb-2"><a href="#" class="font-roboto-light tx-white text-decoration-none" style="font-size: 13px;">Home</a></li>
                                 <li class="mb-2"><a href="business/org/pages/modelo.php" target="_blank" class="font-roboto-light tx-white text-decoration-none" style="font-size: 13px;">Pedagogical Model</a></li>
                                 <li class="mb-2"><a href="#ofertaAcademica" class="font-roboto-light tx-white text-decoration-none" style="font-size: 13px;">Academic Offer</a></li>
                             </ul>
-                        </div>
+                        </div>-->
+                        <?php echo $enlaces_explore_footer; ?>
 
                         <!-- ACCESS -->
-                        <div class="col-auto">
+                        <!--<div class="col-auto">
                             <h6-footer class="font-roboto-black tx-pink mb-3" style="font-size: 14px;">ACCESS</h6-footer>
                             <ul class="list-unstyled">
                                 <li class="mb-2"><a href="https://aulavirtual.unicab.org/login/" target="_blank" class="font-roboto-light tx-white text-decoration-none" style="font-size: 13px;">Virtual Classroom</a></li>
@@ -185,7 +205,8 @@ foreach ($copyrightDatos as $filaCopy) {
                                 <li class="mb-2"><a href="https://mail.google.com/a/unicab.org/" target="_blank" class="font-roboto-light tx-white text-decoration-none" style="font-size: 13px;">Institutional Email</a></li>
                                 <li class="mb-2"><a href="business/org/pages/pagos.php" target="_blank" class="font-roboto-light tx-white text-decoration-none" style="font-size: 13px;">Tuition Payments</a></li>
                             </ul>
-                        </div>
+                        </div>-->
+                        <?php echo $enlaces_access_footer; ?>
                     </div>
 
                     <!-- COLUMNA DERECHA: CONTACTO -->
