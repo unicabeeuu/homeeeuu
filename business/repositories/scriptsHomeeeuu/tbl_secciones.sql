@@ -37,7 +37,7 @@ INSERT INTO tbl_secciones (seccion, visible, paginaPadre, titulo, subTitulo, tex
 ('footer', 1,'home', '', '', ''),
 ('navBarSolutions', 1, 'home', '', '', ''),
 
-('sobreNosotrosUnicab', 1,'sobreNosotros', 'What is <b>UNICAB EDUCATIONAL CORPORATION?</b>', '', 'The Business Training Unit of Boyacá “<b>UNICAB EDUCATIONAL CORPORATION</b>” It is a non-profit institution, created 23 years ago through the Secretariat of Social Participation of the Government of Boyacá, which provides formal and informal education services with more than 23 years of experience and has the following organizational structure:'),
+('sobreNosotrosUnicab', 1,'sobreNosotros', '<span style="color:#0B77B3;">What is</span> <b>UNICAB EDUCATIONAL CORPORATION?</b>', '', 'The Business Training Unit of Boyacá “<b>UNICAB EDUCATIONAL CORPORATION</b>” It is a non-profit institution, created 23 years ago through the Secretariat of Social Participation of the Government of Boyacá, which provides formal and informal education services with more than 23 years of experience and has the following organizational structure:'),
 ('sobreNosotrosImagenesUne', 1,'sobreNosotros', '', '', ''),
 ('sobreNosotrosEducacionFormal', 1,'sobreNosotros', '<b>School</b><br> UNICAB Virtual ', '(Formal Education)', ''),
 ('sobreNosotrosImagenesDos', 1,'sobreNosotros', '', '', ''),
@@ -56,7 +56,7 @@ INSERT INTO tbl_secciones (seccion, visible, paginaPadre, titulo, subTitulo, tex
 ('solicitudesCertificaciones', 1, '','<b>APPLICATIONS FOR</b> CERTIFICATIONS AND PAPERS', '', ''),
 
 ('nuestrosEstudiantes', 1, 'nuestrosEstudiantes', '<b>Our</b><br><span style="color:#0B77B3;">Students</span>', '', ''),
-('publicacionesAcademicas', 1, 'publicacionesAcademicas', '<b>Publications</b> Academics', '', ''),
+('publicacionesAcademicas', 1, 'publicacionesAcademicas', '<b>Publications</b> <span style="color:#0B77B3;">Academics</span>', '', ''),
 ('principiosYValores', 1, 'principiosYValores', '<b>Principles and</b><br>Corporate Values', '', 'UNICAB is a formal education institution that strives for the comprehensive development of each and every one of its students; but when we talk about development, we move to a completely innovative context, because it is here where, through our curricular structure,<i> development is the autonomous and conscious result of the student in terms of a defined learning process and a flexible, dynamic, and relevant teaching methodology based on ethical principles so that, together with the development of capacities, skills, and abilities in specific areas</i>, they can have excellent performance and project a harmonious life project with identity, which corresponds to their dreams, aspirations, and abilities.'),
 ('cartiHome', 0, 'cartiHome', '<b>CARTI</b> Explore', '', ''),
 

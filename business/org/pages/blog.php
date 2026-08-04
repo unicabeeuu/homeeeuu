@@ -21,7 +21,8 @@
         include("../components/blog/noticiasBlog.php");
         include("../components/blog/blogPost.php");
         
-        include('../../../components/footer.php');
+        //include('../../../components/footer.php');
+        include('../../../components/footerEEUU.php');
         include('../../../components/bookstoresMain.php');
     ?>  
 <body>

@@ -992,7 +992,8 @@
         
         include("../components/main_presaberes_sm.php");
         
-        include('../../../components/footer.php');
+        //include('../../../components/footer.php');
+        include('../../../components/footerEEUU.php');
         include('../../../components/bookstoresMain.php');
     ?>  
 <body>
