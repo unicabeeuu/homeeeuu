@@ -18,7 +18,8 @@
 
         include('../components/nuestrosEstudiantes/nuestrosEstudiantes.php');
 
-        include('../../../components/footer.php');
+        //include('../../../components/footer.php');
+        include('../../../components/footerEEUU.php');
         include('../../../components/bookstoresMain.php');
     ?>  
 <body>

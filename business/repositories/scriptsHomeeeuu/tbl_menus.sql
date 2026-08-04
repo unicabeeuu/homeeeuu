@@ -13,18 +13,18 @@ CREATE TABLE tbl_menus (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_spanish_ci;
 
 INSERT INTO tbl_menus (menu, nivel, padre, icono, linkNivelRaiz, linkNivelTres, destino) VALUES
-('UNICAB Virtual College', '', '', '', '', '', ''),
+('THRIVE Virtual College', '', '', '', '', '', ''),
 ('CARTI Explore', '', '', '', '', '',''),
-('UNICAB Solutions', '' ,'', '', '', '', ''),
+('THRIVE Solutions', '' ,'', '', '', '', ''),
 ('Admissions', '', '', '', '', '', ''),
-('Virtual Classroom', '', '', '', 'https://aulavirtual.unicab.org/login/', 'https://aulavirtual.unicab.org/login/', '_blank'),
+('Virtual Classroom', '', '', '', 'https://campus.thriveusa.org/login/index.php', 'https://campus.thriveusa.org/login/index.php', '_blank'),
 ('Academic Record', '', '', '', 'https://unicab.org/login_registro.php', 'https://unicab.org/login_registro.php', '_blank'),
 ('Email', '', '', '', 'https://mail.google.com/a/unicab.org/', 'https://mail.google.com/a/unicab.org/', '_blank'),
 
 ('About Us', 'raiz', '1', '', 'business/org/pages/sobreNosotros.php', '../../../business/org/pages/sobreNosotros.php',''),
 ('Our History', 'raiz', '1', '', 'business/org/pages/historia.php', '../../../business/org/pages/historia.php',''),
 ('Guiding Principles', 'raiz', '1', '', 'business/org/pages/principiosYValores.php', '../../../business/org/pages/principiosYValores.php',''),
-('UNICAB Groups Network', 'raiz', '1', '', 'business/org/pages/historia.php#grupos', '../../../business/org/pages/historia.php#grupos',''),
+('THRIVE Groups Network', 'raiz', '1', '', 'business/org/pages/historia.php#grupos', '../../../business/org/pages/historia.php#grupos',''),
 ('Pedagogical Model', 'raiz', '1', '', 'business/org/pages/modelo.php', '../../../business/org/pages/modelo.php',''),
 ('Educational Offer', 'raiz', '1', '', '#ofertaAcademica', '#ofertaAcademica',''),
 ('Contact Directory', 'raiz', '1', '', 'business/org/pages/directorioInstitucional.php', '../../../business/org/pages/directorioInstitucional.php',''),

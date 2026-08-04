@@ -22,7 +22,8 @@
         include('../components/aboutUs/aboutUsEducation.php'); 
         include('../components/aboutUs/aboutUsImageTwo.php'); 
         include('../components/aboutUs/aboutUsInfo.php');
-        include('../../../components/footer.php');
+        //include('../../../components/footer.php');
+        include('../../../components/footerEEUU.php');
         include('../../../components/bookstoresMain.php');
     ?>
 </body>

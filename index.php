@@ -14,7 +14,7 @@
 <body>
     <?php 
         $nivel = "raiz";
-        include('components/navbar.php');
+        include('components/navBar.php');
         include('components/botonFlotante.php');
         include('components/bannerCarrousel.php');
         include('components/academicOffer.php');
@@ -24,7 +24,7 @@
         include('components/meetcampus.php');
         include('components/linksZone.php');
         include('components/conectadosBlog.php');
-        include('components/footer.php');
+        //include('components/footer.php');
         include('components/footerEEUU.php');
         include('components/bookstoresMain.php');
     ?>  

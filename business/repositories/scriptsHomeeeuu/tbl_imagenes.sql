@@ -293,4 +293,3 @@ UPDATE tbl_imagenes SET titulo = 'MONDAY TO FRIDAY<br>8:00 a.m. A 12:00 p.m.<br>
 
 UPDATE tbl_imagenes SET id_seccion = '1' WHERE (id = '40');
 UPDATE tbl_imagenes SET id_seccion = '1' WHERE (id = '149');
-UPDATE tbl_imagenes SET id_seccion = '1' WHERE (id = '150');
