@@ -123,20 +123,20 @@ foreach ($copyrightDatos as $filaCopy) {
 <footer class="w-100 p-0 m-0 bg-dark-blue">
     <div class="container-fluid">
         <div class="row justify-content-center">
-            <div class="col-12 col-xl-11">
-                <div class="row first-footer mt-5 pb-5 tx-white gy-4">
+            <div class="col-12">
+                <div class="row first-footer mt-5 pb-5 tx-white">
                     <!-- BLOQUE LOGO + DESCRIPCIÓN + REDES -->
-                    <div class="col-12 col-md-6 col-lg-3">
+                    <div class="col-6 col-md-6 col-lg-3">
                         <div class="row">
                             <div class="col-12 d-flex flex-column align-items-center align-items-lg-start text-center text-lg-start">
                                 <?php if (!empty($logoFooter)): ?>
-                                    <div class="mb-3">
+                                    <div class="">
                                         <img src="<?php echo rutaPorNivel($logoFooter['ruta']); ?>"
                                             alt="THRIVE Global Academy"
                                             style="height: 120px; width: auto; max-width: 100%;">
                                     </div>
                                 <?php endif; ?>
-                                <p-footer class="font-roboto-light tx-white mb-4" style="font-size: 14px; line-height: 1.6;">
+                                <p-footer class="font-roboto-light tx-white mb-2" style="font-size: 14px; line-height: 1.6;">
                                     Education without borders to shape the global leaders of tomorrow, from anywhere in the world.
                                 </p-footer>
                                 <div class="d-flex flex-wrap justify-content-center justify-content-lg-start gap-2">
@@ -145,34 +145,8 @@ foreach ($copyrightDatos as $filaCopy) {
                             </div>
                         </div>
                     </div>
-                    <div class="col-12 col-lg-6">
-                        <div class="row gy-4">
-                            <!-- BLOQUE EXPLORE -->
-                            <div class="col-12 col-sm-6">
-                                <div class="row">
-                                    <div class="col-12">
-                                        <h6-footer class="font-roboto-black tx-pink mb-3" style="font-size: 14px;">EXPLORE</h6-footer>
-                                        <ul class="list-unstyled">
-                                            <?php echo $html_explore; ?>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- BLOQUE ACCESS -->
-                            <div class="col-12 col-sm-6">
-                                <div class="row">
-                                    <div class="col-12">
-                                        <h6-footer class="font-roboto-black tx-pink mb-3" style="font-size: 14px;">ACCESS</h6-footer>
-                                        <ul class="list-unstyled">
-                                            <?php echo $html_access; ?>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                     <!--  BLOQUE CONTACTO -->
-                    <div class="col-12 col-lg-3">
+                    <div class="col-6 col-md-6 col-lg-3 ps-5">
                         <div class="row">
                             <div class="col-12 d-flex flex-column align-items-start text-start">
                                 <p-footer class="font-roboto-thinitalic tx-white mb-1" style="font-size: 12px; line-height: 1.2;">
@@ -192,6 +166,28 @@ foreach ($copyrightDatos as $filaCopy) {
                                 <p-footer class="font-roboto-light tx-white" style="font-size: 12px; line-height: 1.3;">
                                     <?php echo $ubicacion; ?>
                                 </p-footer>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- BLOQUE EXPLORE -->
+                    <div class="col-6 col-md-6 col-lg-3 ps-5">
+                        <div class="row">
+                            <div class="col-12">
+                                <h6-footer class="font-roboto-black tx-pink mb-3" style="font-size: 14px;">EXPLORE</h6-footer>
+                                <ul class="list-unstyled">
+                                    <?php echo $html_explore; ?>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- BLOQUE ACCESS -->
+                    <div class="col-6 col-md-6 col-lg-3 ps-5">
+                        <div class="row">
+                            <div class="col-12">
+                                <h6-footer class="font-roboto-black tx-pink mb-3" style="font-size: 14px;">ACCESS</h6-footer>
+                                <ul class="list-unstyled">
+                                    <?php echo $html_access; ?>
+                                </ul>
                             </div>
                         </div>
                     </div>

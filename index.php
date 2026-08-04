@@ -14,7 +14,7 @@
 <body>
     <?php 
         $nivel = "raiz";
-        include('components/navbar.php');
+        include('components/navBar.php');
         include('components/botonFlotante.php');
         include('components/bannerCarrousel.php');
         include('components/academicOffer.php');
