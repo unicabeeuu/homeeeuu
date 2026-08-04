@@ -41,11 +41,11 @@
         $html .=    '</a>';
 
         $ubicacion = array_shift($iconos);
-        $html .=    '<a type="button" class="w-100 text-center location-btn" data-bs-toggle="modal" data-bs-target="#mapaModal">';
+        /*$html .=    '<a type="button" class="w-100 text-center location-btn" data-bs-toggle="modal" data-bs-target="#mapaModal">';
         $html .=       '<div class="button-move_content text-center">';
         $html .=           '<img ' . ImageAttributeBuilder::buildAttributes($nivel, $ubicacion['ruta'], $ubicacion['descripcion']) . ' class="button-move-icon img-fluid">';
         $html .=       '</div>';
-        $html .=    '</a>';
+        $html .=    '</a>';*/
 
         $inscripcionesAbiertas = array_shift($iconos);
         $html .=    '<a href="' . $inscripcionesAbiertas['enlace'] . '" class="button-move w-100" role="button">';

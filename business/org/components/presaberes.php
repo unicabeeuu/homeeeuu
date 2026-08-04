@@ -106,7 +106,7 @@
                     <div class="row">
                          <div class="col-lg-5 col-md-4"></div>
                          <div class="col-lg-2 col-md-4">
-                              <button class="presaberes-boton border-0" onclick="val_documento_presaberes();">Continuar</button>
+                              <button class="presaberes-boton border-0" onclick="val_documento_presaberes();">Continue</button>
                          </div>
                          <div class="col-lg-5 col-md-4"></div>
                     </div><br>

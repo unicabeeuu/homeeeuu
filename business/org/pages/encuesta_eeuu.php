@@ -16,7 +16,8 @@
         //include('../../../components/botonFlotante.php');
 
         include('../components/encuestas/encuesta_eeuu.php');
-        include('../../../components/footer.php');
+        //include('../../../components/footer.php');
+        include('../../../components/footerEEUU.php');
         include('../../../components/bookstoresMain.php');
     ?>
 <body>

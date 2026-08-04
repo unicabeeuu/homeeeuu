@@ -16,6 +16,7 @@
         include('../../../components/navBarSolutions.php');
         include('../components/transformacionDigital.php');
         //include('../../../components/footer.php');
+        include('../../../components/footerEEUU.php');
         include('../../../components/footerSolutions.php');
         include('../../../components/bookstoresMain.php');
     ?>

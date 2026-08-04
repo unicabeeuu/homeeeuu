@@ -78,13 +78,16 @@ circle {
     --bold-blue: #0D3041;
     --blue: #127eb5;
     --aquamarine: #42C3AE;
-    --aquamarine: #42C3AE;
     --green: #4dc250;
     --orange: #fe9100;
     --white: #f5f5f5;
     --medium-gray: #4d4d4f;
     --light-gray: #d4cece;
     --light-gray-o26: #d4cece42;
+    --pink: #FC0D8C;
+    --dark-blue:#222A75;
+    --dark-pink: #D00671;
+    --blue-h2: #16224F;
 
     /** Espaciado **/
     --m-escritorio: 7.8rem;
@@ -318,6 +321,42 @@ circle {
     background: var(--light-gray-o26);
 }
 
+/* Pink */
+.tx-pink {
+    color: var(--pink);
+}
+
+.bg-pink {
+    background: var(--pink);
+}
+
+/* Dark Blue */
+.tx-dark-blue {
+    color: var(--dark-blue);
+}
+
+.bg-dark-blue {
+    background: var(--dark-blue);
+}
+
+/* Dark Pink */
+.tx-dark-pink {
+    color: var(--dark-pink);
+}
+
+.bg-dark-pink {
+    background: var(--dark-pink);
+}
+
+/* Blue H2 */
+.tx-blue-h2 {
+    color: var(--blue-h2);
+}
+
+.bg-blue-h2 {
+    background: var(--blue-h2);
+}
+
 .fw-bold {
     font-weight: bold;
 }
@@ -345,7 +384,7 @@ ul {
 
 
 .error {
-    background: #FBE5E7 !important;
+    background: #ffffff !important;
 }
 
 #alert {
@@ -384,6 +423,11 @@ ul {
     height: max-content;
 }
 
+.unicab-brand img {
+    width: 130px !important;
+    height: auto;
+}
+
 #bars {
     border: #F5F5F5 1px solid;
     border-radius: 5px;
@@ -407,14 +451,15 @@ ul {
     text-align: center;
     width: 90%;
     padding: 0.5em;
+
 }
 
 .first-level-link:hover {
-    background-color: var(--aquamarine) !important;
+    background-color: var(--pink) !important;
 }
 
 .first-level-link.hover {
-    background-color: var(--aquamarine) !important;
+    background-color: var(--pink) !important;
 }
 
 .navbar-toggler:focus {
@@ -463,12 +508,12 @@ ul {
 
 .dropdown_our-item:hover {
     color: var(--white);
-    background-color: rgba(86, 190, 243, 0.97);
+    background-color:var(--pink);
 }
 
 .dropdown_our-item.hover {
     color: var(--white);
-    background-color: rgba(86, 190, 243, 0.97);
+    background-color: var(--pink);
 }
 
 .dropdown_our-item {
@@ -508,18 +553,18 @@ ul {
 
     .menu-item-text:hover {
         background-color: inherit;
-        color: var(--medium-gray) !important;
+        color: var(--dark-blue) !important;
         cursor: pointer;
     }
 
     .menu-item-text.hover {
         background-color: inherit;
-        color: var(--medium-gray) !important;
+        color: var(--dark-blue) !important;
         cursor: pointer;
     }
 
     .dropdown_our-item {
-        border-bottom: 2px solid rgba(86, 190, 243, 0.97);
+        border-bottom: 2px solid #0B77B3;
     }
 
     #menuDisplay {
@@ -545,11 +590,11 @@ ul {
     }
 
     .menu-item-text:hover {
-        border-bottom: 2px solid var(--medium-gray);
+        border-bottom: 2px solid var(--pink);
     }
 
     .menu-item-text.hover {
-        border-bottom: 2px solid var(--medium-gray);
+        border-bottom: 2px solid var(--pink);
     }
 
     .dropdown_our-container {
@@ -574,7 +619,7 @@ ul {
         left: 0;
         width: 100%;
         height: 100%;
-        background-color: var(--blue);
+        background-color: var(--dark-blue);
         opacity: 0.97;
     }
 
@@ -677,7 +722,7 @@ p4-footer {
 }
 
 .image-footer:hover p2-footer {
-    color: #4DC250;
+    color: var(--dark-pink);
 }
 
 .social-media-icon:hover {
@@ -787,6 +832,7 @@ p-directory {
     /* 48px / 16 */
     letter-spacing: 0.07rem;
     /* 1.12px / 16 */
+    font-family: var(--roboto-black);
 }
 
 input.search {
@@ -838,7 +884,7 @@ input.search {
     transform: translate(-50%, -50%) scale3d(0, 1, 1); 
     width: 120%;
     height: 120%;
-    background-color: #FFD156;
+    background-color: var(--dark-blue);
     border-radius: 40%;
     z-index: -1;
     transition: transform 0.3s ease-in-out;
@@ -919,9 +965,39 @@ p-calendario {
     padding-block: .5rem;
     border-radius: 10px;
     font-size: 1.5rem;
-    background: var(--orange);
+    background: var(--pink);
     color: var(--white);
     font-family: var(--roboto-bold);
+}
+
+.btn-payments {
+    display: block;
+    width: max-content;
+    min-width: 220px;
+    margin: 1rem auto 0;
+    padding: .85rem 1.75rem;
+    border-radius: 12px;
+    font-size: 1rem;
+    background: var(--pink);
+    color: var(--white);
+    font-family: var(--roboto-bold);
+    text-align: center;
+    text-decoration: none;
+    text-transform: none;
+    border: none;
+    box-shadow: 0 10px 22px rgba(0, 0, 0, 0.18);
+    transition: transform 0.2s ease, box-shadow 0.2s ease, opacity 0.2s ease;
+}
+
+.btn-payments:hover,
+.btn-payments:focus {
+    transform: translateY(-1px);
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.22);
+    opacity: 0.98;
+}
+
+.btn-payments:active {
+    transform: translateY(0);
 }
 
 .calendary-event {
@@ -1010,7 +1086,7 @@ p-financieros {
     appearance: none;
     -webkit-appearance: none;
     -moz-appearance: none;
-    background: var(--orange);
+    background: var(--pink);
     height: 100%;
     border: none;
     text-align: left;
@@ -1094,8 +1170,8 @@ p-financieros {
 }
 
 .select-wrapper.error .display-options {
-    background: #FBE5E7 !important;
-    color: var(--medium-gray) !important;
+    background: var(--pink) !important;
+    color: white !important;
 }
 
 .btn_displayed {
@@ -1116,7 +1192,7 @@ p-financieros {
     align-items: center;
     justify-content: center;
     gap: 1rem;
-    background-color: var(--orange) !important;
+    background-color: var(--pink) !important;
     width: fit-content !important;
 }
 
@@ -1171,7 +1247,7 @@ p-financieros {
 }
 
 .indicator-data h3 {
-    color: var(--blue);
+    color: var(--dark-blue);
     
     font-size: 2.50rem;
     letter-spacing: 0.07rem;
@@ -1239,7 +1315,7 @@ p-financieros {
     letter-spacing: 0.10rem;
     line-height: 1;
 
-    color: var(--blue);
+    color: var(--dark-blue);
     font-family: var(--roboto-black);
     margin-bottom: 7.8rem;
 }
@@ -1272,7 +1348,7 @@ p-financieros {
 }
 
 .linksZone-container:hover a {
-    color: var(--blue);
+    color: #0B77B3;
 }
 
 .linksZone-container:hover img {
@@ -1372,7 +1448,7 @@ p-financieros {
     position: absolute;
 
     mix-blend-mode: darken;
-    background-color: rgb(40, 167, 69);
+    background-color: var(--pink);
     opacity: .88;
     z-index: 1;
 
@@ -1407,6 +1483,7 @@ p-financieros {
     font-family: var(--roboto-bolditalic);
     letter-spacing: 0.04rem;
     line-height: 1.2;
+    color: var(--bold-blue);
 }
 
 .noticias-p {
@@ -1459,7 +1536,7 @@ p-financieros {
 }
 
 .noticias-newsletter-btn[style*="display: none;"] {
-    background-color: gray;
+    background-color: var(--pink);
     pointer-events: none;
 }
 
@@ -1538,7 +1615,7 @@ p-financieros {
 
     text-align: center;
     font-family: var(--roboto-black);
-    color: var(--blue);
+    color: var(--dark-blue);
 }
 
 .historia-title br {
@@ -1554,7 +1631,7 @@ p-financieros {
     font-size: 2.5rem;
     letter-spacing: 0.007rem;
     font-family: var(--roboto-black);
-    color: var(--orange);
+    color: var(--pink);
     line-height: 1.2;
 }
 
@@ -1562,9 +1639,7 @@ p-financieros {
     width: 3.25rem;
     height: 3.25rem;
 
-    object-fit: contain;
-    filter: invert(50%) sepia(98%) saturate(1116%) hue-rotate(2deg) brightness(105%) contrast(102%);
-    margin-bottom: 1.8125rem;
+
 }
 
 .historia-lineaTiempo-p {
@@ -1634,6 +1709,7 @@ p-financieros {
     letter-spacing: .02rem;
     line-height: 1.5;
     font-family: var(--roboto-regular);
+    color: #2A2A2A;
 }
 
 .historia-ecosistema-efecto {
@@ -1656,7 +1732,7 @@ p-financieros {
 
     width: 4.2rem;
     color: white;
-    background-color: var(--orange);
+    background-color: var(--pink);
     box-shadow: inset 0px 3px 6px #0000001F, 0px 3px 6px #00000029;
     border-radius: 12px;
     padding: .8rem .5rem;
@@ -1667,14 +1743,14 @@ p-financieros {
 
 .historia-ecosistema-seeMore:hover {
     color: white;
-    background-color: var(--bold-blue);
+    background-color: var(--blue-h2);
 }
 
 .historia-ecosistema-separator {
     height: 2px;
     width: 100%;
     border: none;
-    background-color: var(--orange);
+    background-color: var(--pink);
     margin-bottom: 1rem;
     opacity: 1;
 }
@@ -1731,7 +1807,7 @@ p-financieros {
     line-height: 1.2;
 
     font-family: var(--roboto-black);
-    color: var(--blue);
+    color: var(--dark-blue);
 }
 
 @keyframes appearModelo {
@@ -1807,7 +1883,7 @@ p-financieros {
     letter-spacing: 0.10rem;
     line-height: 1.3;
     font-family: var(--roboto-light);
-    color: var(--blue);
+    color: #0B77B3;
     margin-bottom: 7.8rem;
 }
 
@@ -1833,7 +1909,7 @@ p-financieros {
     transform: translate(-50%, -50%) scale3d(0, 1, 1); 
     width: 120%;
     height: 120%;
-    background-color: #FFD156;
+    background-color: var(--dark-pink);
     border-radius: 40%;
     z-index: -1;
     transition: transform 0.4s ease-in-out;
@@ -1904,7 +1980,7 @@ p-financieros {
     letter-spacing: 0.10rem;
     line-height: 1;
     font-family: var(--roboto-black);
-    color: var(--blue);
+    color: var(--dark-blue);
 }
 
 .logros-post-publisher {
@@ -1949,7 +2025,7 @@ p-financieros {
 }
 
 #comentariosCampos h4 {
-    background-color: var(--green);
+    background-color: var(--pink);
     color: white;
     padding-top: 1.5rem;
     padding-bottom: 1.5rem;
@@ -2023,7 +2099,7 @@ p-financieros {
 }
 
 .logros-aside-boton {
-    background-color: var(--orange);
+    background-color: var(--pink);
     color: white;
     font-family: var(--roboto-regular);
     padding: .5rem;
@@ -2222,10 +2298,11 @@ p-financieros {
 }
 
 .presaberes-paso {
-    background-color: #FFD156;
+    background-color: var(--aquamarine);
     display: flex;
     align-items: center;
     justify-content: center;
+    color: white;
 }
 
 .presaberes-paso h3 {
@@ -2236,10 +2313,11 @@ p-financieros {
 }
 
 .presaberes-paso-indicacion {
-    background-color: #16224F;
+    background-color: inherit;
     display: flex;
     align-items: center;
     justify-content: center;
+    color: white;
 }
 
 .presaberes-paso-indicacion h3 {
@@ -2247,7 +2325,7 @@ p-financieros {
     letter-spacing: 0.07rem;
     line-height: 1.2;
     font-family: var(--roboto-black);
-    color: white;
+    color: black;
 }
 
 .presaberes-paso-title {
@@ -2264,7 +2342,7 @@ p-financieros {
     padding-bottom: 1.2rem;
 
     border-radius: 0.75rem;
-    background-color: var(--orange);
+    background-color: var(--pink);
     color: white;
     
     line-height: 1.2;
@@ -2366,14 +2444,14 @@ px solid #000;
 }
 
 .egresados-title {
-    color: var(--orange);
+    color: var(--pink);
     font-family: var(--roboto-black);
     letter-spacing: 0.136rem;
     font-size: 4.875rem;
 }
 
 .egresados-subtitle {
-    color: var(--blue);
+    color: var(--dark-blue);
     font-family: var(--roboto-black);
     letter-spacing: 0.105rem;
     font-size: 3.75rem;
@@ -2384,14 +2462,14 @@ px solid #000;
     font-family: var(--roboto-light);
 letter-spacing: 0.07rem;
     font-size: 2.5rem;
-    color: var(--orange)
+    color: var(--pink)
 }
 
 .egresados-card-subtitle {
     font-family: var(--roboto-black);
     letter-spacing: 0.105rem;
     font-size: 3.75rem;
-    color: var(--blue);
+    color: var(--dark-blue);
 }
 
 .egresados-card-description {
@@ -2417,7 +2495,7 @@ letter-spacing: 0.07rem;
 
 .home-button-fixed {
     position: fixed;
-    background-color: var(--orange);
+    background-color: var(--pink);
     top: 50%;
     right: 1%;
     border-radius: 10px;
@@ -2450,7 +2528,7 @@ letter-spacing: 0.07rem;
     width: max-content;
     gap: .6rem;
     border-radius: 10px;
-    background-color: var(--orange);
+    background-color: var(--pink);
     transform: translateX(calc(-100% + 55px));
 }
 
@@ -2466,7 +2544,7 @@ letter-spacing: 0.07rem;
     opacity: 1;
     height: auto;
     visibility: visible;
-    color: black;
+    color: white;
     font-size: 1rem;
     font-family: var(--roboto-light);
 }
@@ -2577,7 +2655,7 @@ letter-spacing: 0.07rem;
     text-align: center;
     font-family: var(--roboto-medium);
     font-size: 1.875rem;
-    background-color: var(--orange);
+    background-color: var(--pink);
     overflow: hidden;
     transition: color 0.3s ease;
     -webkit-animation: slide-in-bottom 0.8s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
@@ -2607,6 +2685,7 @@ letter-spacing: 0.07rem;
     -webkit-transform: translateY(0) translateX(-50%);
             transform: translateY(0) translateX(-50%);
     opacity: 1;
+    background-color: var(--pink);
   }
 }
 
@@ -2619,7 +2698,7 @@ letter-spacing: 0.07rem;
     transform: translate(-50%, -50%) scale3d(0, 1, 1); 
     width: 120%;
     height: 120%;
-    background-color: #FFD156;
+    background-color: var(--dark-pink);
     border-radius: 40%;
     z-index: -1;
     transition: transform 0.6s ease-in-out;
@@ -2673,7 +2752,7 @@ letter-spacing: 0.07rem;
 
 .h2-oferta {
     font-family: var(--roboto-black);
-    color: var(--blue);
+    color: var(--dark-blue);
     /* font-size: 3.75rem; */
     font-size: 3rem;
     text-align: center;
@@ -2859,7 +2938,7 @@ letter-spacing: 0.07rem;
     font-family: var(--roboto-bold);
     font-size: 2.12rem;
     color: white;
-    background-color: #28A745;
+    background-color: var(--pink);
     text-align: center;
     padding: 1.3rem 0 .2rem 0;
 }
@@ -2871,13 +2950,14 @@ input[type="text"].input-inscripciones {
 input[type="text"].input-inscripciones, textarea.input-inscripciones {
     padding: .5rem .5rem;
     font-size: 1rem;
-    border: solid 2px var(--green) !important;
+    border: solid 2px var(--pink) !important;
     border-radius: 5px !important;
 }
 
 input[type="checkbox"] {
     margin-top: .5rem;
     border-color: var(--green);
+    background-color: var(--green);
 }
 
 .notificacion-error {
@@ -2908,7 +2988,7 @@ input[type="checkbox"] {
 
 .form-inscripciones {
     font-size: 0.75rem;
-    border: 2px solid var(--green);
+    border: 2px solid #00000029;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
@@ -2921,6 +3001,7 @@ input[type="checkbox"] {
     margin: 0;
     font-size: 0.9rem;
     color: #000;
+    font-family: 'Arial', sans-serif;
 }
 
 .inscripciones-btn {
@@ -2938,17 +3019,17 @@ input[type="checkbox"] {
 
 .inscripciones-btn {
     padding: .5rem 0;
-    background-color: #28A745;
+    background-color: var(--pink);
     text-transform: uppercase;
     color: var(--white);
     border-radius: 2px;
-    border: 1px solid #28A745;
+    border: 1px solid var(--pink);
     text-align: center;
     transition: background-color 0.3s;
 }
 
 .inscripciones-btn:hover {
-    background-color: #0ad310;
+    background-color: var(--pink);
 }
 
 /** Fin inscripciones abiertas */
@@ -2967,7 +3048,7 @@ input[type="checkbox"] {
 
 .h2-nuestros-estudiantes {
     font-size: 3.75rem;
-    color: var(--blue);
+    color: var(--dark-blue);
     letter-spacing: 0.10rem;
     line-height: 1;
 }
@@ -3043,7 +3124,7 @@ input[type="checkbox"] {
 }
 
 .h2-principios {
-    color: var(--blue);
+    color: var(--dark-blue);
     text-transform: uppercase;
     margin-bottom: var(--m-escritorio);
     /* font-size: 3.75rem; */
@@ -3102,8 +3183,8 @@ input[type="checkbox"] {
 
 .principios-line {
     margin: 1rem 0;
-    color: var(--orange);
-    background-color: var(--orange);
+    color: var(--pink);
+    background-color: var(--pink);
     border: 0;
     width: 64%;
     opacity: 1;
@@ -3119,7 +3200,7 @@ input[type="checkbox"] {
     font-family: var(--roboto-bolditalic);
     border-radius: 12px;
     padding: 0.75rem;
-    background-color: var(--orange);
+    background-color: var(--pink);
     color: white;
     overflow: hidden;
     z-index: 1;
@@ -3133,7 +3214,7 @@ input[type="checkbox"] {
     transform: translate(-50%, -50%) scale3d(0, 1, 1); 
     width: 120%;
     height: 120%;
-    background-color: #FFD156;
+    background-color: var(--dark-pink);
     border-radius: 40%;
     z-index: -1;
     transition: transform 0.6s ease-in-out;
@@ -3172,7 +3253,7 @@ input[type="checkbox"] {
 .h2-publicaciones {
     text-transform: uppercase;
     font-size: 3.75rem;
-    color: var(--blue);
+    color: var(--dark-blue);
     letter-spacing: 0.105rem;
     line-height: 1;
 }
@@ -3225,7 +3306,7 @@ input[type="checkbox"] {
     font-family: var(--roboto-bolditalic);
     color: white;
     border-radius: 12px;
-    background-color: var(--orange);
+    background-color: var(--pink);
     overflow: hidden;
     z-index: 10;
 }
@@ -3238,7 +3319,7 @@ input[type="checkbox"] {
     transform: translate(-50%, -50%) scale3d(0, 1, 1); 
     width: 120%;
     height: 120%;
-    background-color: #FFD156;
+    background-color: var(--dark-pink);
     border-radius: 40%;
     z-index: -1;
     transition: transform 0.6s ease-in-out;
@@ -3508,11 +3589,11 @@ input[type="checkbox"] {
 }
 
 .form-select-pagos.error .selected-value {
-    color: #999999;
+    color: white;
 }
 
 .form-select-pagos.error .display-options {
-    background-color: #FFE0D9!important;
+    background-color: var(--pink);
 }
 
 .form-select-pagos .custom-option {
@@ -3522,12 +3603,12 @@ input[type="checkbox"] {
 }
 
 .tx-red {
-    color: red;
+    color: var(--medium-gray);
     font-size: 1.563rem;
 }
 
 .tx-green {
-    color: var(--green);
+    color: var(--medium-gray);
 }
 
 .tx-primary-blue {
@@ -3653,7 +3734,7 @@ input[type="checkbox"] {
 
 .btn-circulares-costos {
     color: var(--white);
-    background-color: var(--orange);
+    background-color: var(--pink);
     font-size: 1.563rem;
     line-height: 1.2;
     letter-spacing: 0.044rem;
@@ -3695,12 +3776,12 @@ input[type="checkbox"] {
     margin-left: 25%;
 }
 .amarillo {
-    background: #FFD156;
-    color: #FFD156;
+    background: var(--aquamarine);
+    color: var(--aquamarine);
 }
 .azuloscuro {
-    background: #16224F;
-    color: white;
+    background: inherit;
+    color: #000000;
     font-weight: bold;
     display: table;
     height:50px;
@@ -3724,7 +3805,7 @@ input[type="checkbox"] {
 }
 input[type="text"], .select, textarea {
     border-radius: 15px !important;
-    border: 2px solid #42C3AE;
+    border: 2px solid var(--aquamarine);
 }
 .form-label1 {
     margin: 0.1rem 0;
@@ -4365,7 +4446,7 @@ input[type="text"], .select, textarea {
         line-height: 1;
 
         font-family: var(--roboto-black);
-        color: var(--blue);
+        color: var(--dark-blue);
         text-align: start;
     }
 
@@ -4528,7 +4609,7 @@ input[type="text"], .select, textarea {
 
     .historia-ecosistema-seeMore:hover {
         color: transparent !important;
-        background-color: var(--orange) !important;
+        background-color: var(--blue-h2) !important;
     }
 
     .historia-ecosistema-card {
@@ -4942,7 +5023,7 @@ input[type="text"], .select, textarea {
         padding-bottom: 1.2rem;
 
         border-radius: 0.75rem;
-        background-color: var(--orange);
+        background-color: var(--pink);
         color: white;
         
         line-height: 1.2;
@@ -4967,14 +5048,14 @@ input[type="text"], .select, textarea {
     }
 
     .egresados-title {
-        color: var(--orange);
+        color: var(--pink);
         font-family: var(--roboto-black);
         letter-spacing: 0.0488rem;
         font-size: 1.75rem;
     }
 
     .egresados-subtitle {
-        color: var(--blue);
+        color: var(--dark-blue);
         font-family: var(--roboto-black);
         letter-spacing: 0.0156rem;
         font-size: 1.5625rem;
@@ -4985,14 +5066,14 @@ input[type="text"], .select, textarea {
         font-family: var(--roboto-light);
         letter-spacing: 0.0313rem;
         font-size: 1.125rem;
-        color: var(--orange)
+        color: var(--pink)
     }
 
     .egresados-card-subtitle {
         font-family: var(--roboto-black);
         letter-spacing: 0.0437rem;
         font-size: 1.5625rem;
-        color: var(--blue);
+        color: var(--dark-blue);
     }
 
     .egresados-card-description {
@@ -5451,7 +5532,7 @@ input[type="text"], .select, textarea {
     .h2-publicaciones {
         text-transform: uppercase;
         font-size: 2.5rem;
-        color: var(--blue);
+        color: var(--dark-blue);
         letter-spacing: 0.07rem;
     }
 
@@ -5492,7 +5573,7 @@ input[type="text"], .select, textarea {
         font-family: var(--roboto-bolditalic);
         color: white;
         border-radius: 12px;
-        background-color: var(--orange);
+        background-color: var(--pink);
         box-shadow: inset 0px 3px 6px #0000001F, 0px 3px 6px #00000029;
     }
 
@@ -6413,7 +6494,7 @@ input[type="text"], .select, textarea {
         letter-spacing: 0.03rem;
         line-height: 1;
         font-family: var(--roboto-black);
-        color: var(--blue);
+        color: var(--dark-blue);
     }
 
     /* Linea de tiempo */
@@ -6563,7 +6644,7 @@ input[type="text"], .select, textarea {
 
     .historia-ecosistema-seeMore:hover {
         color: transparent !important;
-        background-color: var(--orange) !important;
+        background-color: var(--blue-h2) !important;
     }
 
     .historia-ecosistema-card {
@@ -6960,7 +7041,7 @@ input[type="text"], .select, textarea {
         padding-bottom: 1.2rem;
 
         border-radius: 0.75rem;
-        background-color: var(--orange);
+        background-color: var(--pink);
         color: white;
         
         line-height: 1.2;
@@ -6986,14 +7067,14 @@ input[type="text"], .select, textarea {
     }
 
     .egresados-title {
-        color: var(--orange);
+        color: var(--pink);
         font-family: var(--roboto-black);
         letter-spacing: 0.0894rem;
         font-size: 3.1875rem;
     }
 
     .egresados-subtitle {
-        color: var(--blue);
+        color: var(--dark-blue);
         font-family: var(--roboto-black);
         letter-spacing: 0.0281rem;
         font-size: 2.8125rem;
@@ -7004,14 +7085,14 @@ input[type="text"], .select, textarea {
         font-family: var(--roboto-light);
         letter-spacing: 0.0575rem;
         font-size: 2.0625rem;
-        color: var(--orange)
+        color: var(--pink)
     }
 
     .egresados-card-subtitle {
         font-family: var(--roboto-black);
         letter-spacing: 0.0437rem;
         font-size: 1.5625rem;
-        color: var(--blue);
+        color: var(--dark-blue);
     }
 
     .egresados-card-description {
@@ -7391,7 +7472,7 @@ input[type="text"], .select, textarea {
     .h2-publicaciones {
         text-transform: uppercase;
         font-size: 2.5rem;
-        color: var(--blue);
+        color: var(--dark-blue);
         letter-spacing: 0.07rem;
     }
 
@@ -7434,7 +7515,7 @@ input[type="text"], .select, textarea {
         font-family: var(--roboto-bolditalic);
         color: white;
         border-radius: 12px;
-        background-color: var(--orange);
+        background-color: var(--pink);
         box-shadow: inset 0px 3px 6px #0000001F, 0px 3px 6px #00000029;
     }
 
@@ -7838,7 +7919,7 @@ p4-footer {
 }
 
 .image-footer:hover p2-footer {
-    color: #4DC250;
+    color: var(--dark-pink);
 }
 
 .social-media-icon:hover {

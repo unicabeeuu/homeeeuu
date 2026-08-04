@@ -19,7 +19,8 @@
         include("../components/historia/lineaTiempo.php");
         include("../components/historia/informacion.php");
         include("../components/historia/ecosistema.php");
-        include('../../../components/footer.php');
+        //include('../../../components/footer.php');
+        include('../../../components/footerEEUU.php');
         include('../../../components/bookstoresMain.php');
     ?>  
 <body>

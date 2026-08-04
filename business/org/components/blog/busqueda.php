@@ -86,7 +86,7 @@
     if ($html != '') {
         $html .= '
           <section class="mt-4">
-               <div class="bg-bold-blue">
+               <div class="bg-dark-blue">
                     <div class="container py-5">
                          <div class="row mb-5">
                     '; 
@@ -106,7 +106,7 @@
                $html .= '
                     <div class="col-md-3 d-lg-none d-block"></div>
                     <div class="col-lg-4 col-md-6 col-sm-12 col-12 d-flex justify-content-center '.$position.'">
-                         <a role="button" data-categoria-boton data-categoria="'.$link["categoriaBoton"].'" class="bg-orange w-100 d-flex justify-content-center align-items-center logros-busqueda-link">'.$link["textoBoton"].'</a>
+                         <a role="button" data-categoria-boton data-categoria="'.$link["categoriaBoton"].'" class="bg-pink w-100 d-flex justify-content-center align-items-center logros-busqueda-link">'.$link["textoBoton"].'</a>
                     </div>
                     <div class="col-md-3 d-lg-none d-block"></div>
                ';

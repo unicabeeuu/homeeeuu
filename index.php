@@ -8,7 +8,7 @@
 <html lang="en">
 <?php 
     $nivel = "raiz";
-    $page_title = "Home UNICAB";
+    $page_title = "Home THRIVE";
     include('components/headMain.php');
 ?>
 <body>
@@ -24,7 +24,8 @@
         include('components/meetcampus.php');
         include('components/linksZone.php');
         include('components/conectadosBlog.php');
-        include('components/footer.php');
+        //include('components/footer.php');
+        include('components/footerEEUU.php');
         include('components/bookstoresMain.php');
     ?>  
 <body>

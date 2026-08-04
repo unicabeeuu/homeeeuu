@@ -17,7 +17,8 @@
 
         //include('../components/encuestas/encuesta_eeuu_resultado.php');
         include('../components/encuestas/encuesta_eeuu_resultado_f.php');
-        include('../../../components/footer.php');
+        //include('../../../components/footer.php');
+        include('../../../components/footerEEUU.php');
         include('../../../components/bookstoresMain.php');
     ?>
     <!--<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>-->

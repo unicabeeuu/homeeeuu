@@ -19,7 +19,7 @@ if (!empty($filasInfoCheck)) {
         $html_info .= '<img class="col-2 image-info-about-us" src="' . $path_image . '" alt="' . $altern . '">';
         $html_info .= '<div class="mb-3 col-12">';
         $html_info .= '<div class="d-flex flex-column">';
-        $html_info .= '<h3-nosotros class="tx-orange font-roboto-light-title ps-3">' . $titulo . '</h3-nosotros>';
+        $html_info .= '<h3-nosotros class="tx-pink font-roboto-light-title ps-3">' . $titulo . '</h3-nosotros>';
         $html_info .= '<p-nosotros-1 class="about-line-left font-roboto-regular pt-3 px-2 ps-3 position-relative">' . $descripcion . '</p-nosotros>';
         $html_info .= '</div>';
         $html_info .= '</div>';

@@ -24,7 +24,7 @@
             $html_row_one  = '<div class="row p-0 m-0">';
             $html_row_one .= '<div class="col-lg-1 col-md-2 col-1 p-0 m-0"></div>';
             $html_row_one .= '<div class="p-0 col-lg-10 col-md-7 col-7">';
-            $html_row_one .= '<h2-calendario class="tx-blue font-roboto-light-title">'
+            $html_row_one .= '<h2-calendario class="tx-dark-blue font-roboto-light-title">'
                             . $row_data_calendary['titulo'] .
                               '</h2-calendario>';
             $html_row_one .= '</div>';
@@ -54,7 +54,7 @@
                                     . 'class="mx-lg-0 mx-auto btn shadow h-auto tx-color-wh btn-calendary fw-semibold" '
                                     . 'style="width:200px;"'
                                     . '>'
-                                    . 'Ver'
+                                    . 'See'
                                     . '</a>';
                     $html_row_two .= '</div>';
                     $html_row_two .= '</div>';

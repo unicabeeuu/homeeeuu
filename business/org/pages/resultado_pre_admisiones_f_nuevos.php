@@ -14,7 +14,8 @@
         $nivel = "tres";
         include('../../../components/navBar.php');
         include('../components/entrevista/resultado_pre_admisiones_f_nuevos.php');
-        include('../../../components/footer.php');
+        //include('../../../components/footer.php');
+        include('../../../components/footerEEUU.php');
         include('../../../components/bookstoresMain.php');
     ?>  
 <body>
